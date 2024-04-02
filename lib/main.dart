@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
 // ),
                   Image.asset('assets/icons/SplashLogo.png'),
 
-                   SvgPicture.asset('assets/icons/DriveText.svg'),
                   SvgPicture.asset('assets/icons/SplashLogo.svg'),
                   // SizedBox(
                   //   height: 100,
