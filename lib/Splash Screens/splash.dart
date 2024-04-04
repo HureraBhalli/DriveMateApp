@@ -1,16 +1,36 @@
+import 'dart:async';
+import 'package:flutter/src/widgets/app.dart';
+import 'package:drive_mate/Splash%20Screens/after_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 
 
 class Splash extends StatefulWidget {
-  const Splash({super.key});
 
+  static const String id = 'Splash';
+
+
+  const Splash({super.key});
   @override
-  State<Splash> createState() => _SplashState();
+  _SplashState createState() => _SplashState();
 }
 
 class _SplashState extends State<Splash> {
+
+
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 4), () {
+      if (mounted) { // Make sure that the context is still available
+        Navigator.of(context).pushReplacementNamed(AfterSplash.id);
+      }
+    });
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,22 +40,27 @@ class _SplashState extends State<Splash> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center, // This will center the Column content vertically
         children: [
-          Spacer(flex: 2), // Use Spacer to create flexible spaces between widgets
+          Spacer(flex: 2),
+
+
+
+          // Use Spacer to create flexible spaces between widgets
           Image.asset(
             'assets/icons/SplashLogo.png',
           ),
+
           SvgPicture.asset('assets/icons/DriveText.svg'),
-          Spacer(), // Another Spacer
+          Spacer(), // they Spacer
+
           SvgPicture.asset('assets/icons/Splash_Bottom.svg'),
-          // Spacer(flex: 2), // Adjust flex to create proportionate space
         ],
       ),
     ),
 
-
-
     );
   }
 }
+
+
 
 
