@@ -34,9 +34,7 @@ class _WelcomeState extends State<Welcome> {
             child: Row(
                 children: [
                   ElevatedButton(
-                    // style: ElevatedButton.styleFrom(
-                    //   backgroundColor: MaterialStatePropertyAll(Colors.transparent),
-                    //   shadowColor: Colors.transparent,),
+
 
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.transparent), // Transparent background
@@ -120,8 +118,6 @@ class _WelcomeState extends State<Welcome> {
                   )),
             ),
           ),
-
-
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 5),
             child: Container(
