@@ -50,7 +50,7 @@ class _AfterSplashState extends State<AfterSplash> {
               Navigator.pushNamed(context, Welcome.id);
 
           },),
-          Spacer(),
+          Spacer(flex: 1,),
       ]),
 
     );

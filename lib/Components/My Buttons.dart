@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 
 
+
+//My Buttons
+
 class MyButton extends StatelessWidget {
   // const MyButton({super.key, required String title});
   final String title;
@@ -35,7 +38,6 @@ class MyButton extends StatelessWidget {
               end: Alignment.bottomRight,
             ),
 
-
             borderRadius: BorderRadius.circular(20),
             // color: color,
           ),
@@ -45,7 +47,6 @@ class MyButton extends StatelessWidget {
     );
   }
 }
-
 
 
 
