@@ -46,13 +46,43 @@ class _AfterSplashState extends State<AfterSplash> {
           Spacer(flex: 4,),
           MyButton(title: 'New user? Sign up here', onpress: (){},),
 
-          MyButton(title: 'Get Started', onpress: (){
-            
-              // Navigator.pushNamed(context, Welcome.id);
+          // MyButton(title: 'Get Started', onpress: () {
+          //   Navigator.pushNamed(context, Welcome.id);
+          // },),
+
+          GestureDetector(
+            // ... other properties
+            child: Hero(
+              tag: 'uniqueHeroTag',  // Make sure this tag is unique across your app
+              child: MyButton(
+                title: 'Get Started',
+                onpress: () {
+                  Navigator.of(context).push(PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) => Welcome(),
+                    transitionDuration: Duration(milliseconds:220),
+                    reverseTransitionDuration: Duration(milliseconds: 220),
+                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                      // Your existing transition if you still want to apply it
+                      var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                          .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                      return ScaleTransition(
+                        scale: scaleTween,
+                        child: child,
+                      );
+                    },
+                  ));
+                },
+              ),
+            ),
+          ),
 
 
 
-          },),
+
+
+
+
+
           Spacer(flex: 1,),
       ]),
 

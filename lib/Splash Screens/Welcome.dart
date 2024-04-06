@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter/src/animation/animation.dart';
 
 
 
@@ -28,6 +29,7 @@ class _WelcomeState extends State<Welcome> {
     return Scaffold(
 
       appBar: AppBar(
+
         centerTitle: true,
         title: const Text('Welcome to Drive Mate', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 16),),
       ),
@@ -249,17 +251,34 @@ class _WelcomeState extends State<Welcome> {
             ),
           ),
 
+
           Spacer(flex: 3),
+          // Your widget:
+
 
           GestureDetector(
             child: MyButton(
-                title: 'Get Started', onpress: (){
-              Navigator.pushNamed(context, SignUp.id);
-            }
+                title: 'Get Started', onpress: () {
+              Navigator.of(context).push(PageRouteBuilder(
+                pageBuilder: (context, animation, secondaryAnimation) => SignUp(),
+                transitionDuration: Duration(milliseconds:220),
+                reverseTransitionDuration: Duration(milliseconds: 220),
+                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                  // Your existing transition if you still want to apply it
+                  var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                      .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                  return ScaleTransition(
+                    scale: scaleTween,
+                    child: child,
+                  );
+                },
+              ));
+            },
             ),
           ),
 
-          Spacer(flex: 1),
+        const Spacer(flex: 1),
+
         ],
       ),
 
