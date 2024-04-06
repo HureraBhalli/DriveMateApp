@@ -47,7 +47,10 @@ class _AfterSplashState extends State<AfterSplash> {
           MyButton(title: 'New user? Sign up here', onpress: (){},),
 
           MyButton(title: 'Get Started', onpress: (){
-              Navigator.pushNamed(context, Welcome.id);
+            
+              // Navigator.pushNamed(context, Welcome.id);
+
+
 
           },),
           Spacer(flex: 1,),
@@ -55,4 +58,8 @@ class _AfterSplashState extends State<AfterSplash> {
 
     );
   }
+}
+
+class PageTransition {
+
 }

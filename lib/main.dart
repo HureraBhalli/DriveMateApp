@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'Splash Screens/Welcome.dart';
 import 'Splash Screens/after_splash.dart';
+import 'Sign Up/SignUp.dart';
 
 
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
          Splash.id: (context) => const Splash(),
         AfterSplash.id: (context) => const AfterSplash(),
         Welcome.id: (context) => const Welcome(),
+        SignUp.id: (context) => const SignUp(),
 
 
       },

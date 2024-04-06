@@ -1,4 +1,5 @@
 import 'package:drive_mate/Components/My%20Buttons.dart';
+import 'package:drive_mate/Sign%20Up/SignUp.dart';
 import 'package:drive_mate/Splash%20Screens/after_splash.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,51 +26,62 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Welcome to Drive Mate', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 16),),
+      ),
+
+
       body: Column(
         children: [
           const SizedBox(
-            height: 10,
+            height: 30,
           ),
-          SafeArea(
-            child: Row(
-                children: [
-                  ElevatedButton(
+
+          // SafeArea(
+            // child: Row(
+            //     children: [
+            //       ElevatedButton(
+            //
+            //         style: ButtonStyle(
+            //           backgroundColor: MaterialStateProperty.all(Colors.transparent), // Transparent background
+            //           shadowColor: MaterialStateProperty.all(Colors.transparent),
+            //
+            //           minimumSize: MaterialStateProperty.all(Size(0, 36)),
+            //
+            //           padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 12)),
+            //
+            //           overlayColor: MaterialStateProperty.resolveWith<Color?>(
+            //                 (Set<MaterialState> states) {
+            //               if (states.contains(MaterialState.pressed)) return Colors.transparent; // No pressed overlay color
+            //               return null; // Defer to the widget's default.
+            //             },
+            //           ),
+            //           elevation: MaterialStateProperty.all(0), // No elevation
+            //         ),
+            //         onPressed: () {
+            //
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => AfterSplash()),
+            //
+            //           );
+            //         },
+            //
+            //         child: SvgPicture.asset('assets/icons/BackButton.svg'),
+            //       ),
+            //
+            //        const Spacer(flex: 1),
+            //       const Text('Welcome to Drive Mate', style: TextStyle(fontSize: 16, fontFamily: 'Poppins Medium' ),),
+            //       const Spacer(flex: 2),
+            //     ]
+            // ),
+          // ),
 
 
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.transparent), // Transparent background
-                      shadowColor: MaterialStateProperty.all(Colors.transparent),
 
-                      minimumSize: MaterialStateProperty.all(Size(0, 36)),
 
-                      padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 12)),
-
-                      overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                            (Set<MaterialState> states) {
-                          if (states.contains(MaterialState.pressed)) return Colors.transparent; // No pressed overlay color
-                          return null; // Defer to the widget's default.
-                        },
-                      ),
-                      elevation: MaterialStateProperty.all(0), // No elevation
-                    ),
-                    onPressed: () {
-
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => AfterSplash()),
-
-                      );
-                    },
-
-                    child: SvgPicture.asset('assets/icons/BackButton.svg'),
-                  ),
-
-                   const Spacer(flex: 1),
-                  const Text('Welcome to Drive Mate', style: TextStyle(fontSize: 16, fontFamily: 'Poppins Medium' ),),
-                  const Spacer(flex: 2),
-                ]
-            ),
-          ),
 
           const Align(
             alignment: Alignment.centerLeft,
@@ -239,11 +251,14 @@ class _WelcomeState extends State<Welcome> {
 
           Spacer(flex: 3),
 
-          MyButton(
-              title: 'Get Started', onpress: (
-
-              ){}
+          GestureDetector(
+            child: MyButton(
+                title: 'Get Started', onpress: (){
+              Navigator.pushNamed(context, SignUp.id);
+            }
+            ),
           ),
+
           Spacer(flex: 1),
         ],
       ),
