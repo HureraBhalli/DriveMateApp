@@ -1,3 +1,4 @@
+import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Splash%20Screens/splash.dart';
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         AfterSplash.id: (context) => const AfterSplash(),
         Welcome.id: (context) => const Welcome(),
         SignUp.id: (context) => const SignUp(),
+        Home.id: (context) => const Home(),
 
 
       },

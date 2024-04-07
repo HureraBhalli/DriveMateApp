@@ -1,5 +1,6 @@
 import 'package:drive_mate/Components/My%20Buttons.dart';
 import 'package:drive_mate/Splash%20Screens/Welcome.dart';
+import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
@@ -44,11 +45,31 @@ class _AfterSplashState extends State<AfterSplash> {
 
 
           Spacer(flex: 4,),
-          MyButton(title: 'New user? Sign up here', onpress: (){},),
 
-          // MyButton(title: 'Get Started', onpress: () {
-          //   Navigator.pushNamed(context, Welcome.id);
-          // },),
+
+          GestureDetector(
+            child: MyButton(
+              title: 'New user? Sign up here', onpress: () {
+              Navigator.of(context).push(PageRouteBuilder(
+                pageBuilder: (context, animation, secondaryAnimation) => Home(),
+                transitionDuration: Duration(milliseconds:220),
+                reverseTransitionDuration: Duration(milliseconds: 220),
+                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                  // Your existing transition if you still want to apply it
+                  var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                      .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                  return ScaleTransition(
+                    scale: scaleTween,
+                    child: child,
+                  );
+                },
+              ));
+            },
+            ),
+          ),
+
+
+
 
           GestureDetector(
             // ... other properties
