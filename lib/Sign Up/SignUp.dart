@@ -25,7 +25,7 @@ class SignUp extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Spacer(flex: 3),
+            Spacer(flex: 2),
             Image.asset('assets/icons/Drive_SignUp.png'),
             const SizedBox(
               height: 30,
@@ -232,7 +232,7 @@ class SignUp extends StatelessWidget {
 
 
 
-            const Spacer(flex: 3),
+            const Spacer(flex: 2),
 
 
             GestureDetector(
@@ -265,6 +265,8 @@ class SignUp extends StatelessWidget {
 
         ),
       ),
+
+
 
 
     );
