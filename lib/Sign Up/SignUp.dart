@@ -224,8 +224,6 @@ class SignUp extends StatelessWidget {
 
 
 
-
-
             const Spacer(flex: 2),
 
 
