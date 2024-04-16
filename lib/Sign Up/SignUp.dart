@@ -21,240 +21,244 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: [
+                Spacer(flex: 2),
+                Image.asset('assets/icons/Drive_SignUp.png'),
+                const SizedBox(
+                  height: 30,
+                ),
+                const Align(
+                  alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 28.0),
+                      child: Text('Sign Up', style: TextStyle(fontSize: 18, fontFamily: 'Poppins Semibold'),),
+                    )),
 
-      body: Center(
-        child: Column(
-          children: [
-            Spacer(flex: 2),
-            Image.asset('assets/icons/Drive_SignUp.png'),
-            const SizedBox(
-              height: 30,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 28.0),
-                  child: Text('Sign Up', style: TextStyle(fontSize: 18, fontFamily: 'Poppins Semibold'),),
-                )),
-
-            SizedBox(
-              height: 22,
-            ),
+                SizedBox(
+                  height: 22,
+                ),
 
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
-              child: Container(
-                height: 60,
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xffFAFAFA),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
+                  child: Container(
+                    height: 60,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffFAFAFA),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                        ),
+                        focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                        ),
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, right: 12),
+                          child: Image.asset('assets/signup/Upload.png', width: 24, height: 24,),
+                        ),
+                        labelText: 'Upload vehicle photos',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins Regular',
+                            fontSize: 14,
+                            color: Color(0xff000200).withOpacity(0.7)),
+                      ),
                     ),
-                    focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
-                    ),
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, right: 12),
-                      child: Image.asset('assets/signup/Upload.png', width: 24, height: 24,),
-                    ),
-                    labelText: 'Upload vehicle photos',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Poppins Regular',
-                        fontSize: 14,
-                        color: Color(0xff000200).withOpacity(0.7)),
                   ),
                 ),
-              ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
-              child: Container(
-                height: 60,
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xffFAFAFA),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
+                  child: Container(
+                    height: 60,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffFAFAFA),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                        ),
+                        focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                        ),
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, right: 12),
+                          child: Image.asset('assets/signup/License.png', width: 24, height: 24,),
+                        ),
+                        labelText: 'Driving License Number',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins Regular',
+                            fontSize: 14,
+                            color: Color(0xff000200).withOpacity(0.7)),
+                      ),
                     ),
-                    focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
-                    ),
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, right: 12),
-                      child: Image.asset('assets/signup/License.png', width: 24, height: 24,),
-                    ),
-                    labelText: 'Driving License Number',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Poppins Regular',
-                        fontSize: 14,
-                        color: Color(0xff000200).withOpacity(0.7)),
                   ),
                 ),
-              ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
-              child: Container(
-                height: 60,
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xffFAFAFA),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
+                  child: Container(
+                    height: 60,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffFAFAFA),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                        ),
+                        focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                        ),
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, right: 12),
+                          child: Image.asset('assets/signup/Vehicle.png', width: 24, height: 24,),
+                        ),
+                        labelText: 'Vehicle Type ie, ES300H',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins Regular',
+                            fontSize: 14,
+                            color: Color(0xff000200).withOpacity(0.7)),
+                      ),
                     ),
-                    focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
-                    ),
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, right: 12),
-                      child: Image.asset('assets/signup/Vehicle.png', width: 24, height: 24,),
-                    ),
-                    labelText: 'Vehicle Type ie, ES300H',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Poppins Regular',
-                        fontSize: 14,
-                        color: Color(0xff000200).withOpacity(0.7)),
                   ),
                 ),
-              ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
-              child: Container(
-                height: 60,
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xffFAFAFA),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
+                  child: Container(
+                    height: 60,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffFAFAFA),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                        ),
+                        focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                        ),
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, right: 12),
+                          child: Image.asset('assets/signup/Brand.png', width: 24, height: 24,),
+                        ),
+                        labelText: 'Make i.e, Lexus, BMW',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins Regular',
+                            fontSize: 14,
+                            color: Color(0xff000200).withOpacity(0.7)),
+                      ),
                     ),
-                    focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
-                    ),
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, right: 12),
-                      child: Image.asset('assets/signup/Brand.png', width: 24, height: 24,),
-                    ),
-                    labelText: 'Make i.e, Lexus, BMW',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Poppins Regular',
-                        fontSize: 14,
-                        color: Color(0xff000200).withOpacity(0.7)),
                   ),
                 ),
-              ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
-              child: Container(
-                height: 60,
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xffFAFAFA),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
+                  child: Container(
+                    height: 60,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffFAFAFA),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                        ),
+                        focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                        ),
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, right: 12),
+                          child: Image.asset('assets/signup/Model.png', width: 24, height: 24,),
+                        ),
+                        labelText: 'Year Model',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins Regular',
+                            fontSize: 14,
+                            color: Color(0xff000200).withOpacity(0.7)),
+                      ),
                     ),
-                    focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
-                    ),
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, right: 12),
-                      child: Image.asset('assets/signup/Model.png', width: 24, height: 24,),
-                    ),
-                    labelText: 'Year Model',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Poppins Regular',
-                        fontSize: 14,
-                        color: Color(0xff000200).withOpacity(0.7)),
                   ),
                 ),
-              ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
-              child: Container(
-                height: 60,
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xffFAFAFA),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8.0),
+                  child: Container(
+                    height: 60,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffFAFAFA),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+                        ),
+                        focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
+                          borderRadius: BorderRadius.circular(14.0),
+                          borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
+                        ),
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, right: 12),
+                            child: Image.asset('assets/signup/Category.png', width: 24, height: 24,),
+                        ),
+                        labelText: 'Preferred Category',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins Regular',
+                            fontSize: 14,
+                            color: Color(0xff000200).withOpacity(0.7)),
+                      ),
                     ),
-                    focusedBorder: OutlineInputBorder( // This is the border style when the TextField is focused
-                      borderRadius: BorderRadius.circular(14.0),
-                      borderSide: BorderSide(color: Color(0xff999A99), width: 1.6), // This will be a thicker border than `enabledBorder` and not translucent
-                    ),
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, right: 12),
-                        child: Image.asset('assets/signup/Category.png', width: 24, height: 24,),
-                    ),
-                    labelText: 'Preferred Category',
-                    labelStyle: TextStyle(
-                        fontFamily: 'Poppins Regular',
-                        fontSize: 14,
-                        color: Color(0xff000200).withOpacity(0.7)),
                   ),
                 ),
-              ),
-            ),
 
 
 
-            const Spacer(flex: 2),
+                const Spacer(flex: 2),
 
 
-            GestureDetector(
-              child: MyButton(
-                title: 'Sign Up', onpress: () {
-                Navigator.of(context).push(PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => Home(),
-                  transitionDuration: Duration(milliseconds:220),
-                  reverseTransitionDuration: Duration(milliseconds: 220),
-                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                    // Your existing transition if you still want to apply it
-                    var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
-                        .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
-                    return ScaleTransition(
-                      scale: scaleTween,
-                      child: child,
-                    );
+                GestureDetector(
+                  child: MyButton(
+                    title: 'Sign Up', onpress: () {
+                    Navigator.of(context).push(PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => Home(),
+                      transitionDuration: Duration(milliseconds:220),
+                      reverseTransitionDuration: Duration(milliseconds: 220),
+                      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                        // Your existing transition if you still want to apply it
+                        var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                            .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                        return ScaleTransition(
+                          scale: scaleTween,
+                          child: child,
+                        );
+                      },
+                    ));
                   },
-                ));
-              },
-              ),
+                  ),
+                ),
+
+
+
+                const Spacer(flex: 3),
+
+
+              ],
+
             ),
-
-
-
-            const Spacer(flex: 3),
-
-
-          ],
-
+          ),
         ),
       ),
 
