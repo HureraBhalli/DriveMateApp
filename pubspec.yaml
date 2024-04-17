@@ -71,6 +71,9 @@ flutter:
     - assets/icons/SplashLogo.svg
     - assets/icons/Tick_purple.svg
     - assets/signup/Upload.svg
+    - assets/icons/Bank.svg
+    - assets/icons/Bank.svg
+    - assets/pictures/blackcar.png
 
 
 
@@ -98,6 +101,9 @@ flutter:
     - family: Poppins MediumItalic
       fonts:
         - asset: fonts/Poppins-MediumItalic.ttf
+    - family: Poppins Bold
+      fonts:
+        - asset: fonts/Poppins-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

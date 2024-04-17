@@ -1,4 +1,5 @@
 import 'package:drive_mate/Components/My%20Buttons.dart';
+import 'package:drive_mate/Sign%20Up/SignUp.dart';
 import 'package:drive_mate/Splash%20Screens/Welcome.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class _AfterSplashState extends State<AfterSplash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,7 +53,7 @@ class _AfterSplashState extends State<AfterSplash> {
             child: MyButton(
               title: 'New user? Sign up here', onpress: () {
               Navigator.of(context).push(PageRouteBuilder(
-                pageBuilder: (context, animation, secondaryAnimation) => Home(),
+                pageBuilder: (context, animation, secondaryAnimation) => SignUp(),
                 transitionDuration: Duration(milliseconds:220),
                 reverseTransitionDuration: Duration(milliseconds: 220),
                 transitionsBuilder: (context, animation, secondaryAnimation, child) {

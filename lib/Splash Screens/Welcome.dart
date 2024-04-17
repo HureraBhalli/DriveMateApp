@@ -1,4 +1,5 @@
 import 'package:drive_mate/Components/My%20Buttons.dart';
+import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Sign%20Up/SignUp.dart';
 import 'package:drive_mate/Splash%20Screens/after_splash.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,7 +29,11 @@ class _WelcomeState extends State<Welcome> {
   Widget build(BuildContext context) {
     return Scaffold(
 
+      backgroundColor: Colors.white,
+
+
       appBar: AppBar(
+        backgroundColor: Colors.white,
 
         centerTitle: true,
         title: const Text('Welcome to Drive Mate', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 16),),
@@ -260,7 +265,7 @@ class _WelcomeState extends State<Welcome> {
             child: MyButton(
                 title: 'Get Started', onpress: () {
               Navigator.of(context).push(PageRouteBuilder(
-                pageBuilder: (context, animation, secondaryAnimation) => SignUp(),
+                pageBuilder: (context, animation, secondaryAnimation) => Home(),
                 transitionDuration: Duration(milliseconds:220),
                 reverseTransitionDuration: Duration(milliseconds: 220),
                 transitionsBuilder: (context, animation, secondaryAnimation, child) {
