@@ -9,12 +9,24 @@ import 'package:flutter_svg/svg.dart';
 
 
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
 
   static const String id = 'Home';
 
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
 
   @override
@@ -29,8 +41,8 @@ class Home extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: Container(
-          padding: EdgeInsets.only(top: 14),
           child: AppBar(
+            toolbarHeight: 100,
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
             title: const Padding(
@@ -46,7 +58,7 @@ class Home extends StatelessWidget {
 
             actions: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 26.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -57,7 +69,7 @@ class Home extends StatelessWidget {
                   ),
                   child: const CircleAvatar(
                     radius: 24,
-                    backgroundImage: NetworkImage('https://media.licdn.com/dms/image/D4D03AQHUul13YecS8w/profile-displayphoto-shrink_800_800/0/1704749589763?e=2147483647&v=beta&t=JYsMHXPwIage3jg9C-u20tc9RUsxwmgJez4ZnDPkFkw'),
+                    backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
                   ),
                 ),
               ),
@@ -70,27 +82,26 @@ class Home extends StatelessWidget {
 
       body: SingleChildScrollView(
         child: Column(
-        
+
           children: [
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
-        
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Container(
                height: 70,
-        
-        
+
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.black),
                   borderRadius: BorderRadius.all(Radius.circular(40)),
                   color: Colors.white,
-        
+
                 ),
-        
-        
-        
+
+
+
                 child: Row(
                   children: [
                     const SizedBox(
@@ -100,25 +111,25 @@ class Home extends StatelessWidget {
                     const SizedBox(
                       width: 14,
                     ),
-        
+
                     const Expanded(
                         child: TextField(
-        
+
                         decoration: InputDecoration(
                         hintText:  'Search for services...',
                         hintStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff6763EE)),
                         border: InputBorder.none,
                       ),
                           style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff6763EE)),
-        
+
                         ),
                     ),
-        
+
                     // Text('Search for ', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
                     // Text('services', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff6763EE)), ),
                     // Text('... ', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-        
-        
+
+
                     Padding(
                       padding: const EdgeInsets.only(right: 20.0),
                       child: SvgPicture.asset('assets/icons/Filtersvg.svg'),
@@ -127,35 +138,35 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
             const SizedBox(
               height: 30,
             ),
-        
-        
-        
-        
+
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Container(
                 height: 160,
                 decoration: BoxDecoration(
-        
+
                   borderRadius: BorderRadius.all(Radius.circular(26)),
-        
+
                   gradient: LinearGradient(
                     colors: [
                       const Color(0xff6763EE).withOpacity(0.7), // Purple with 67% opacity
                       const Color(0xff6763EE).withOpacity(1), // Purple with 100% opacity
                    ],
-        
+
                 ),
               ),
                 child: Padding(
@@ -167,28 +178,28 @@ class Home extends StatelessWidget {
                       color: Color(0xff1D1D1D).withOpacity(0.15),
                       borderRadius: BorderRadius.all(Radius.circular(20))
                     ),
-        
+
                     child: Row(
                         children: [
-                          Spacer(flex: 2,),
+                          const Spacer(flex: 2,),
                           Image.asset('assets/pictures/blackcar.png'),
                           Spacer(flex: 2,),
                           const Text('Ford Mustang\n2023 A34567', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xffFFFFFF)),),
-                          Spacer(flex: 5),
+                          const Spacer(flex: 5),
                           SvgPicture.asset('assets/icons/memory_plus.svg'),
-                          Spacer(flex: 2),
+                          const Spacer(flex: 2),
                         ],
                     ),
-        
+
                   ),
                 ),
             ),
             ),
-        
+
             const SizedBox(
               height: 30,
             ),
-        
+
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 22.0),
               child: Align(
@@ -196,12 +207,12 @@ class Home extends StatelessWidget {
                   child: Text('My Wallet', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),
                   )),
             ),
-        
+
             const SizedBox(
               height: 12,
             ),
-        
-        
+
+
              Padding(
                padding: const EdgeInsets.symmetric(horizontal: 22.0),
                child: Row(
@@ -218,11 +229,11 @@ class Home extends StatelessWidget {
                          padding: const EdgeInsets.only(left: 14.0),
                          child: Column(
                            children: [
-        
+
                              const SizedBox(
                                height: 18,
                              ),
-        
+
                            const Align(
                                alignment: Alignment.centerLeft,
                                child: Text('Credit Card', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Colors.black))),
@@ -232,11 +243,11 @@ class Home extends StatelessWidget {
                              const Align(
                                  alignment: Alignment.centerLeft,
                                  child: Text('\$234.00', style: TextStyle(fontFamily: 'Poppins Bold', fontSize: 22, color: Color(0xff6763EE)))),
-        
+
                              const SizedBox(
                                height: 10,
                              ),
-        
+
                              Padding(
                                padding: const EdgeInsets.only(left: 5.0),
                                child: Row(
@@ -245,7 +256,7 @@ class Home extends StatelessWidget {
                                    const SizedBox(
                                      width: 10,
                                    ),
-        
+
                                    Column(
                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
@@ -256,19 +267,19 @@ class Home extends StatelessWidget {
                                  ]
                                ),
                              ),
-        
-        
-        
+
+
+
                            ],
                          ),
                        ),
                      ),
-        
+
                      const SizedBox(
                        width: 12,
                      ),
-        
-        
+
+
                      Container(
                        width: screenWidth * 0.31,
                        height: 133,
@@ -277,7 +288,7 @@ class Home extends StatelessWidget {
                            color: Color(0xff706CEF).withOpacity(0.15),
                            borderRadius: BorderRadius.all(Radius.circular(14))
                        ),
-        
+
                        child: Column(
                          children: [
                            const SizedBox(
@@ -294,31 +305,31 @@ class Home extends StatelessWidget {
                            SvgPicture.asset('assets/icons/Dollar.svg'),
                          ],
                        ),
-        
+
                      ),
-        
-        
+
+
                    ],
-        
+
                 ),
              ),
-        
-        
-        
+
+
+
             const SizedBox(
               height: 30,
             ),
-        
-            
-            
-            
-        
-        
+
+
+
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Row(
                 children: [
-        
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -327,7 +338,7 @@ class Home extends StatelessWidget {
                       const SizedBox(
                         height: 12,
                       ),
-        
+
                       Container(
                           width: screenWidth * 0.51,
                           height: 66,
@@ -336,8 +347,8 @@ class Home extends StatelessWidget {
                               color: Color(0xff706CEF).withOpacity(0.15),
                               borderRadius: BorderRadius.all(Radius.circular(14))
                           ),
-                        
-        
+
+
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 18.0),
                           child: Row(
@@ -348,17 +359,17 @@ class Home extends StatelessWidget {
                             ],
                           ),
                         ),
-                      
-                      
-                      
+
+
+
                       ),
                     ],
                   ),
-        
+
                   const SizedBox(
                     width: 12,
                   ),
-        
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -367,7 +378,7 @@ class Home extends StatelessWidget {
                       const SizedBox(
                         height: 12,
                       ),
-        
+
                       Container(
                           width: screenWidth * 0.35,
                           height: 66,
@@ -376,8 +387,8 @@ class Home extends StatelessWidget {
                               color: Color(0xff706CEF).withOpacity(0.15),
                               borderRadius: BorderRadius.all(Radius.circular(14))
                           ),
-        
-        
+
+
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 18.0),
                           child: Row(
@@ -387,11 +398,11 @@ class Home extends StatelessWidget {
                               Container(
                                 height: 30,
                                 width: 30,
-        
+
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(6),
-        
+
                                 ),
                                 child: const Center(child: Text('3', style: TextStyle(fontFamily: 'Poppins Bold', fontSize: 16, color: Color(0xff6763EE)))),
                               ),
@@ -399,31 +410,31 @@ class Home extends StatelessWidget {
                           ),
                         ),
                       ),
-        
+
                     ],
                   ),
-        
-        
-        
+
+
+
                 ]
-        
+
               ),
             ),
-        
-        
-        
-        
+
+
+
+
             const SizedBox(
               height: 30,
             ),
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
             GestureDetector(
               child: MyButton(
                 title: 'Book a Service!', onpress: () {
@@ -444,27 +455,128 @@ class Home extends StatelessWidget {
               },
               ),
             ),
-        
-        
-        
-        
-            BottomNavigationBar(
-              backgroundColor: Color(0xff6763EE).withOpacity(0.9),
 
-                items: [
-              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg'), label: 'Home'),
-              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg'), label: 'Home'),
-              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg'), label: 'Home'),
+            const SizedBox(
+              height: 20,
+            ),
 
-            ]),
-        
-        
-        
+
           ],
-        
-        
+
         ),
       ),
+
+
+
+
+       bottomNavigationBar:  ClipRRect(
+         borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30),),
+
+         child: Container(
+          height: 106,
+
+          decoration: const BoxDecoration(
+          ),
+          child: BottomNavigationBar(
+          backgroundColor: Color(0xff6763EE).withOpacity(0.9),
+
+            items: [
+              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg',color: _selectedIndex == 0 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7), ), label: 'Home',),
+              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Garage.svg', color: _selectedIndex == 1 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Garage'),
+              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Wallet.svg', color: _selectedIndex == 2 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Wallet'),
+              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Profile.svg', color: _selectedIndex == 3 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Profile'),
+            ],
+
+            selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
+            unselectedLabelStyle: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xffFFFFFF)),
+
+            //  selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
+            unselectedItemColor: Color(0xffFFFFFF).withOpacity(0.7),
+            unselectedIconTheme:  IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)) ,
+            selectedItemColor: Color(0xffFFFFFF),
+            type: BottomNavigationBarType.fixed,
+            currentIndex: _selectedIndex,
+            onTap: _onItemTapped,
+
+
+          ),
+         ),
+
+       ),
+
+
+      // bottomNavigationBar: ClipRRect(
+      //   borderRadius: BorderRadius.only(
+      //     topLeft: Radius.circular(30),
+      //     topRight: Radius.circular(30),
+      //   ),
+      //   child: Container(
+      //     height: 106,
+      //     decoration: BoxDecoration(
+      //       color: Color(0xff6763EE).withOpacity(0.9),
+      //     ),
+      //     child: Stack(
+      //       children: [
+      //         BottomNavigationBar(
+      //           backgroundColor: Colors.transparent,
+      //           items: [
+      //             BottomNavigationBarItem(
+      //               icon: SvgPicture.asset(
+      //                 'assets/icons/Home.svg',
+      //                 color: _selectedIndex == 0 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+      //               ),
+      //               label: 'Home',
+      //             ),
+      //             BottomNavigationBarItem(
+      //               icon: SvgPicture.asset(
+      //                 'assets/icons/Garage.svg',
+      //                 color: _selectedIndex == 1 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+      //               ),
+      //               label: 'Garage',
+      //             ),
+      //             BottomNavigationBarItem(
+      //               icon: SvgPicture.asset(
+      //                 'assets/icons/Wallet.svg',
+      //                 color: _selectedIndex == 2 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+      //               ),
+      //               label: 'Wallet',
+      //             ),
+      //             BottomNavigationBarItem(
+      //               icon: SvgPicture.asset(
+      //                 'assets/icons/Profile.svg',
+      //                 color: _selectedIndex == 3 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+      //               ),
+      //               label: 'Profile',
+      //             ),
+      //           ],
+      //           selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
+      //           unselectedLabelStyle: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xffFFFFFF)),
+      //           unselectedItemColor: Color(0xffFFFFFF).withOpacity(0.7),
+      //           unselectedIconTheme: IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)),
+      //           selectedItemColor: Color(0xffFFFFFF),
+      //           type: BottomNavigationBarType.fixed,
+      //           currentIndex: _selectedIndex,
+      //           onTap: _onItemTapped,
+      //         ),
+      //         Positioned(
+      //           bottom: 30, // Adjust this value to position the dot properly
+      //           left: MediaQuery.of(context).size.width / 8 + _selectedIndex * (MediaQuery.of(context).size.width / 4) - 4, // Adjust this value to position the dot properly
+      //           child: Container(
+      //             width: 8,
+      //             height: 8,
+      //             decoration: BoxDecoration(
+      //               shape: BoxShape.circle,
+      //               color: Colors.white, // Change this to the color you want for the dot
+      //             ),
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
+
+
+
 
     );
   }
