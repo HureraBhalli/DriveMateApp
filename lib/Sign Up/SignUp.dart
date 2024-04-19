@@ -265,7 +265,6 @@ class SignUp extends StatelessWidget {
 
 
 
-
     );
 
 

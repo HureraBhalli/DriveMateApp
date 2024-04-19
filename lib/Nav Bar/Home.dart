@@ -469,113 +469,125 @@ class _HomeState extends State<Home> {
 
 
 
-       bottomNavigationBar:  ClipRRect(
-         borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30),),
+       // bottomNavigationBar:  ClipRRect(
+       //   borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30),),
+       //
+       //   child: Container(
+       //    height: 106,
+       //
+       //    decoration: const BoxDecoration(
+       //    ),
+       //    child: BottomNavigationBar(
+       //    backgroundColor: Color(0xff6763EE).withOpacity(0.9),
+       //
+       //      items: [
+       //        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg',color: _selectedIndex == 0 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7), ), label: 'Home',),
+       //        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Garage.svg', color: _selectedIndex == 1 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Garage'),
+       //        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Wallet.svg', color: _selectedIndex == 2 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Wallet'),
+       //        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Profile.svg', color: _selectedIndex == 3 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Profile'),
+       //      ],
+       //
+       //      selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
+       //      unselectedLabelStyle: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xffFFFFFF)),
+       //
+       //      //  selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
+       //      unselectedItemColor: Color(0xffFFFFFF).withOpacity(0.7),
+       //      unselectedIconTheme:  IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)) ,
+       //      selectedItemColor: Color(0xffFFFFFF),
+       //      type: BottomNavigationBarType.fixed,
+       //      currentIndex: _selectedIndex,
+       //      onTap: _onItemTapped,
+       //
+       //
+       //    ),
+       //   ),
+       //
+       // ),
 
-         child: Container(
-          height: 106,
 
-          decoration: const BoxDecoration(
+
+      bottomNavigationBar: Stack(
+        alignment: Alignment.bottomCenter,
+        children: [
+          ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            ),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(
+                  sigmaX: 7,
+                  sigmaY: 7),
+              child: Container(
+
+                height: 106, // Adjusted height
+                // color: Color(0xff6763EE).withOpacity(0.9),
+
+                child: BottomNavigationBar(
+                  backgroundColor: Color(0xff6763EE).withOpacity(0.9), // Set to transparent
+                 // backgroundColor: Color(0xff6763EE).withAlpha(100),
+
+                  //backgroundColor: Colors.green,
+                  items: [
+                    BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        'assets/icons/Home.svg',
+                        color: _selectedIndex == 0 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+                      ),
+                      label: 'Home',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        'assets/icons/Garage.svg',
+                        color: _selectedIndex == 1 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+                      ),
+                      label: 'Garage',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        'assets/icons/Wallet.svg',
+                        color: _selectedIndex == 2 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+                      ),
+                      label: 'Wallet',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: SvgPicture.asset(
+                        'assets/icons/Profile.svg',
+                        color: _selectedIndex == 3 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
+                      ),
+                      label: 'Profile',
+                    ),
+                  ],
+                  selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
+                  unselectedLabelStyle: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xffFFFFFF)),
+                  unselectedItemColor: Color(0xffFFFFFF).withOpacity(0.7),
+                  unselectedIconTheme: IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)),
+                  selectedItemColor: Color(0xffFFFFFF),
+                  type: BottomNavigationBarType.fixed,
+                  currentIndex: _selectedIndex,
+                  onTap: _onItemTapped,
+                ),
+              ),
+            ),
           ),
-          child: BottomNavigationBar(
-          backgroundColor: Color(0xff6763EE).withOpacity(0.9),
 
-            items: [
-              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg',color: _selectedIndex == 0 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7), ), label: 'Home',),
-              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Garage.svg', color: _selectedIndex == 1 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Garage'),
-              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Wallet.svg', color: _selectedIndex == 2 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Wallet'),
-              BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Profile.svg', color: _selectedIndex == 3 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),), label: 'Profile'),
-            ],
-
-            selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
-            unselectedLabelStyle: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xffFFFFFF)),
-
-            //  selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
-            unselectedItemColor: Color(0xffFFFFFF).withOpacity(0.7),
-            unselectedIconTheme:  IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)) ,
-            selectedItemColor: Color(0xffFFFFFF),
-            type: BottomNavigationBarType.fixed,
-            currentIndex: _selectedIndex,
-            onTap: _onItemTapped,
-
-
+          Positioned(
+            bottom: 13, // Adjust this value to position the dot properly
+            left: MediaQuery.of(context).size.width / 8 + _selectedIndex * (MediaQuery.of(context).size.width / 4) - 4, // Adjust this value to position the dot properly
+            child: Container(
+              width: 6,
+              height: 6,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white, // Change this to the color you want for the dot
+              ),
+            ),
           ),
-         ),
-
-       ),
-
+        ],
+      ),
 
 
 
-      // bottomNavigationBar: ClipRRect(
-      //   borderRadius: BorderRadius.only(
-      //     topLeft: Radius.circular(30),
-      //     topRight: Radius.circular(30),
-      //   ),
-      //   child: Container(
-      //     height: 106,
-      //     decoration: BoxDecoration(
-      //       color: Color(0xff6763EE).withOpacity(0.9),
-      //     ),
-      //     child: Stack(
-      //       children: [
-      //         BottomNavigationBar(
-      //           backgroundColor: Colors.transparent,
-      //           items: [
-      //             BottomNavigationBarItem(
-      //               icon: SvgPicture.asset(
-      //                 'assets/icons/Home.svg',
-      //                 color: _selectedIndex == 0 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
-      //               ),
-      //               label: 'Home',
-      //             ),
-      //             BottomNavigationBarItem(
-      //               icon: SvgPicture.asset(
-      //                 'assets/icons/Garage.svg',
-      //                 color: _selectedIndex == 1 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
-      //               ),
-      //               label: 'Garage',
-      //             ),
-      //             BottomNavigationBarItem(
-      //               icon: SvgPicture.asset(
-      //                 'assets/icons/Wallet.svg',
-      //                 color: _selectedIndex == 2 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
-      //               ),
-      //               label: 'Wallet',
-      //             ),
-      //             BottomNavigationBarItem(
-      //               icon: SvgPicture.asset(
-      //                 'assets/icons/Profile.svg',
-      //                 color: _selectedIndex == 3 ? Color(0xffFFFFFF) : Color(0xffFFFFFF).withOpacity(0.7),
-      //               ),
-      //               label: 'Profile',
-      //             ),
-      //           ],
-      //           selectedLabelStyle: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Color(0xffFFFFFF)),
-      //           unselectedLabelStyle: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xffFFFFFF)),
-      //           unselectedItemColor: Color(0xffFFFFFF).withOpacity(0.7),
-      //           unselectedIconTheme: IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)),
-      //           selectedItemColor: Color(0xffFFFFFF),
-      //           type: BottomNavigationBarType.fixed,
-      //           currentIndex: _selectedIndex,
-      //           onTap: _onItemTapped,
-      //         ),
-      //         Positioned(
-      //           bottom: 30, // Adjust this value to position the dot properly
-      //           left: MediaQuery.of(context).size.width / 8 + _selectedIndex * (MediaQuery.of(context).size.width / 4) - 4, // Adjust this value to position the dot properly
-      //           child: Container(
-      //             width: 8,
-      //             height: 8,
-      //             decoration: BoxDecoration(
-      //               shape: BoxShape.circle,
-      //               color: Colors.white, // Change this to the color you want for the dot
-      //             ),
-      //           ),
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
 
 
 
