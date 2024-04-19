@@ -273,15 +273,23 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
+
+
+
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: Container(
                     height: 20,
+
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color(0xffFFFFFF).withOpacity(0.5)),
                         color: Color(0xff1D1D1D).withOpacity(0.15),
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                        borderRadius: BorderRadius.all(Radius.circular(20))
+                    ),
+
+
+
                     child: Row(
                       children: [
                         const Spacer(
@@ -379,7 +387,7 @@ class _HomeState extends State<Home> {
                                             fontSize: 12,
                                             color: Color(0xff000000)
                                                 .withOpacity(0.6))),
-                                    Text('*** ***** *** 2341',
+                                    const Text('*** ***** *** 2341',
                                         style: TextStyle(
                                             fontFamily: 'Poppins Medium',
                                             fontSize: 15,
@@ -406,7 +414,7 @@ class _HomeState extends State<Home> {
                         const SizedBox(
                           height: 18,
                         ),
-                        const Text('Credit Card',
+                        const Text('Cash Back',
                             style: TextStyle(
                                 fontFamily: 'Poppins Regular',
                                 fontSize: 12,
