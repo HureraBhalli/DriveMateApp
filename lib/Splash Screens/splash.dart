@@ -55,7 +55,7 @@ class _SplashState extends State<Splash> {
 
           Align(
             alignment: Alignment.bottomCenter,
-              child: SvgPicture.asset('assets/icons/Splash_Bottom.svg'),
+              child: SvgPicture.asset('assets/icons/Splash_Bottom.svg', fit: BoxFit.fitWidth,),
           ),
         ],
 
@@ -67,6 +67,7 @@ class _SplashState extends State<Splash> {
     );
   }
 }
+
 
 
 
