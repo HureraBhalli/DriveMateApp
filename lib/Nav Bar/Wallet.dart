@@ -358,18 +358,7 @@ class _WalletState extends State<Wallet> {
 
 
 
-                        Container(
-                          width: 80,
-                          child: const Row(
-                            children: [
-                              LinearProgressIndicator(
-                                value: 0.8, // Example value indicating the progress (0.0 to 1.0)
-                                backgroundColor: Colors.grey, // Background color of the progress bar
-                                valueColor: AlwaysStoppedAnimation<Color>(Colors.blue), // Color of the progress bar
-                              ),
-                            ],
-                          ),
-                        ),
+                        //Linear Progress Bar
 
 
 
@@ -413,21 +402,20 @@ class _WalletState extends State<Wallet> {
                   ),
 
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 18.0),
-                    child: Row(
-
+                    padding: const EdgeInsets.only(left: 18.0, top: 18.0),
+                    child: Column(
                       children: [
-                        SvgPicture.asset('assets/icons/Redeem.svg'),
-
-                        const Padding(
-                          padding: EdgeInsets.only(top: 18.0, left: 10.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Balance', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12),),
-                              Text('\$12,234.00', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),),
-                            ],
-                          ),
+                        Row(
+                          children: [
+                            Text('Earnings', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
+                            const Spacer(
+                              flex: 3,
+                            ),
+                            SvgPicture.asset('assets/icons/NextBack.svg'),
+                            const Spacer(
+                              flex: 1,
+                            ),
+                          ],
                         ),
                       ],
                     ),
