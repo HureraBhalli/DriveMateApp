@@ -1,3 +1,4 @@
+import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Splash%20Screens/splash.dart';
 import 'dart:async';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         Welcome.id: (context) => const Welcome(),
         SignUp.id: (context) => const SignUp(),
         Home.id: (context) => const Home(),
+        Garage.id: (context) => const Garage(),
 
 
       },

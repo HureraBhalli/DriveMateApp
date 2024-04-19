@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/app.dart';
 import 'package:drive_mate/Splash%20Screens/after_splash.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -53,9 +54,15 @@ class _SplashState extends State<Splash> {
           SvgPicture.asset('assets/icons/DriveText.svg'),
           Spacer(), // they Spacer
 
-          Align(
-            alignment: Alignment.bottomCenter,
-              child: SvgPicture.asset('assets/icons/Splash_Bottom.svg', fit: BoxFit.fitWidth,),
+          Stack(
+           children: [
+             Positioned(
+               child: Align(
+               alignment: Alignment.bottomCenter,
+               child: SvgPicture.asset('assets/icons/Splash_Bottom.svg', fit: BoxFit.fitWidth,),
+             ),)
+
+           ],
           ),
         ],
 
