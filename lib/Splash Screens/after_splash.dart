@@ -54,8 +54,8 @@ class _AfterSplashState extends State<AfterSplash> {
               title: 'New user? Sign up here', onpress: () {
               Navigator.of(context).push(PageRouteBuilder(
                 pageBuilder: (context, animation, secondaryAnimation) => SignUp(),
-                transitionDuration: Duration(milliseconds:220),
-                reverseTransitionDuration: Duration(milliseconds: 220),
+                transitionDuration: Duration(milliseconds: 120),
+                reverseTransitionDuration: Duration(milliseconds: 120),
                 transitionsBuilder: (context, animation, secondaryAnimation, child) {
                   // Your existing transition if you still want to apply it
                   var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
@@ -82,8 +82,8 @@ class _AfterSplashState extends State<AfterSplash> {
                 onpress: () {
                   Navigator.of(context).push(PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) => Welcome(),
-                    transitionDuration: Duration(milliseconds:220),
-                    reverseTransitionDuration: Duration(milliseconds: 220),
+                    transitionDuration: Duration(milliseconds: 120),
+                    reverseTransitionDuration: Duration(milliseconds: 120),
                     transitionsBuilder: (context, animation, secondaryAnimation, child) {
                       // Your existing transition if you still want to apply it
                       var scaleTween = Tween<double>(begin: 0.0, end: 1.0)

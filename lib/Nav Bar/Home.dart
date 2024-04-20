@@ -337,101 +337,106 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Row(
                 children: [
-                  Container(
-                    width: screenWidth * 0.55,
-                    height: 133,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xff6763EE)),
-                        color: Color(0xff706CEF).withOpacity(0.15),
-                        borderRadius: BorderRadius.all(Radius.circular(14))),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 14.0),
-                      child: Column(
-                        children: [
-                          const SizedBox(
-                            height: 18,
-                          ),
-                          const Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text('Credit Card',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins Regular',
-                                      fontSize: 12,
-                                      color: Colors.black))),
-                          const SizedBox(
-                            height: 2,
-                          ),
-                          const Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text('\$234.00',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins Bold',
-                                      fontSize: 22,
-                                      color: Color(0xff6763EE)))),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 5.0),
-                            child: Row(children: [
-                              Image.asset('assets/icons/Bank.png'),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Personal',
-                                        style: TextStyle(
-                                            fontFamily: 'Poppins Regular',
-                                            fontSize: 12,
-                                            color: Color(0xff000000)
-                                                .withOpacity(0.6))),
-                                    const Text('*** ***** *** 2341',
-                                        style: TextStyle(
-                                            fontFamily: 'Poppins Medium',
-                                            fontSize: 15,
-                                            color: Color(0xff000000))),
-                                  ])
-                            ]),
-                          ),
-                        ],
+                  Flexible(
+                    flex: 2,
+                    child: Container(
+                      height: 133,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Color(0xff6763EE)),
+                          color: Color(0xff706CEF).withOpacity(0.15),
+                          borderRadius: BorderRadius.all(Radius.circular(14))),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 14.0),
+                        child: Column(
+                          children: [
+                            const SizedBox(
+                              height: 18,
+                            ),
+                            const Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('Credit Card',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins Regular',
+                                        fontSize: 12,
+                                        color: Colors.black))),
+                            const SizedBox(
+                              height: 2,
+                            ),
+                            const Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('\$234.00',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins Bold',
+                                        fontSize: 22,
+                                        color: Color(0xff6763EE)))),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 5.0),
+                              child: Row(children: [
+                                Image.asset('assets/icons/Bank.png'),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Personal',
+                                          style: TextStyle(
+                                              fontFamily: 'Poppins Regular',
+                                              fontSize: 12,
+                                              color: Color(0xff000000)
+                                                  .withOpacity(0.6))),
+                                      const Text('*** ***** *** 2341',
+                                          style: TextStyle(
+                                              fontFamily: 'Poppins Medium',
+                                              fontSize: 15,
+                                              color: Color(0xff000000))),
+                                    ])
+                              ]),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   const SizedBox(
                     width: 12,
                   ),
-                  Container(
-                    width: screenWidth * 0.31,
-                    height: 133,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xff6763EE)),
-                        color: Color(0xff706CEF).withOpacity(0.15),
-                        borderRadius: BorderRadius.all(Radius.circular(14))),
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 18,
-                        ),
-                        const Text('Cash Back',
-                            style: TextStyle(
-                                fontFamily: 'Poppins Regular',
-                                fontSize: 12,
-                                color: Colors.black)),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        Text('\$234.00',
-                            style: TextStyle(
-                                fontFamily: 'Poppins Bold',
-                                fontSize: 22,
-                                color: Color(0xff6763EE))),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        SvgPicture.asset('assets/icons/Dollar.svg'),
-                      ],
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      width: screenWidth * 0.31,
+                      height: 133,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Color(0xff6763EE)),
+                          color: Color(0xff706CEF).withOpacity(0.15),
+                          borderRadius: BorderRadius.all(Radius.circular(14))),
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 18,
+                          ),
+                          const Text('Cash Back',
+                              style: TextStyle(
+                                  fontFamily: 'Poppins Regular',
+                                  fontSize: 12,
+                                  color: Colors.black)),
+                          const SizedBox(
+                            height: 4,
+                          ),
+                          Text('\$234.00',
+                              style: TextStyle(
+                                  fontFamily: 'Poppins Bold',
+                                  fontSize: 22,
+                                  color: Color(0xff6763EE))),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          SvgPicture.asset('assets/icons/Dollar.svg'),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -442,100 +447,110 @@ class _HomeState extends State<Home> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
-              child: Row(children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
                   children: [
-                    const Text(
-                      'Friends',
-                      style: TextStyle(
-                          fontFamily: 'Poppins Semibold',
-                          fontSize: 18,
-                          color: Color(0xff6763EE)),
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Container(
-                      width: screenWidth * 0.51,
-                      height: 66,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Color(0xff6763EE)),
-                          color: Color(0xff706CEF).withOpacity(0.15),
-                          borderRadius: BorderRadius.all(Radius.circular(14))),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                        child: Row(
-                          children: [
-                            Text('Refer a Friend',
-                                style: TextStyle(
-                                    fontFamily: 'Poppins Semibold',
-                                    fontSize: 14,
-                                    color: Color(0xff6763EE))),
-                            Spacer(
-                              flex: 2,
-                            ),
-                            SvgPicture.asset('assets/icons/Friend.svg'),
-                          ],
+                
+                Flexible(
+                  flex: 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Friends',
+                        style: TextStyle(
+                            fontFamily: 'Poppins Semibold',
+                            fontSize: 18,
+                            color: Color(0xff6763EE)),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        height: 66,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Color(0xff6763EE)),
+                            color: Color(0xff706CEF).withOpacity(0.15),
+                            borderRadius: BorderRadius.all(Radius.circular(14))),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                          child: Row(
+                            children: [
+                              Text('Refer a Friend',
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins Semibold',
+                                      fontSize: 14,
+                                      color: Color(0xff6763EE))),
+                              Spacer(
+                                flex: 2,
+                              ),
+                              SvgPicture.asset('assets/icons/Friend.svg'),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   width: 12,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Services',
-                      style: TextStyle(
-                          fontFamily: 'Poppins Semibold',
-                          fontSize: 18,
-                          color: Color(0xff6763EE)),
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Container(
-                      width: screenWidth * 0.35,
-                      height: 66,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Color(0xff6763EE)),
-                          color: Color(0xff706CEF).withOpacity(0.15),
-                          borderRadius: BorderRadius.all(Radius.circular(14))),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                        child: Row(
-                          children: [
-                            Text('Active',
-                                style: TextStyle(
-                                    fontFamily: 'Poppins Semibold',
-                                    fontSize: 14,
-                                    color: Color(0xff6763EE))),
-                            Spacer(
-                              flex: 2,
-                            ),
-                            Container(
-                              height: 30,
-                              width: 30,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(6),
+                
+                
+                
+                Flexible(
+                  flex: 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Services',
+                        style: TextStyle(
+                            fontFamily: 'Poppins Semibold',
+                            fontSize: 18,
+                            color: Color(0xff6763EE)),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+
+                        height: 66,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Color(0xff6763EE)),
+                            color: Color(0xff706CEF).withOpacity(0.15),
+                            borderRadius: BorderRadius.all(Radius.circular(14))),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                          child: Row(
+                            children: [
+                              Text('Active',
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins Semibold',
+                                      fontSize: 14,
+                                      color: Color(0xff6763EE))),
+                              Spacer(
+                                flex: 2,
                               ),
-                              child: const Center(
-                                  child: Text('3',
-                                      style: TextStyle(
-                                          fontFamily: 'Poppins Bold',
-                                          fontSize: 16,
-                                          color: Color(0xff6763EE)))),
-                            ),
-                          ],
+                              Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(6),
+                                ),
+                                child: const Center(
+                                    child: Text('3',
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins Bold',
+                                            fontSize: 16,
+                                            color: Color(0xff6763EE)))),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ]),
             ),
@@ -549,8 +564,8 @@ class _HomeState extends State<Home> {
                   Navigator.of(context).push(PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
                         Home(),
-                    transitionDuration: Duration(milliseconds: 220),
-                    reverseTransitionDuration: Duration(milliseconds: 220),
+                    transitionDuration: Duration(milliseconds: 120),
+                    reverseTransitionDuration: Duration(milliseconds: 120),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) {
                       // Your existing transition if you still want to apply it

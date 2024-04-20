@@ -235,7 +235,7 @@ class SignUp extends StatelessWidget {
                     title: 'Sign Up', onpress: () {
                     Navigator.of(context).push(PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) => Home(),
-                      transitionDuration: Duration(milliseconds:120),
+                      transitionDuration: Duration(milliseconds: 120),
                       reverseTransitionDuration: Duration(milliseconds: 120),
                       transitionsBuilder: (context, animation, secondaryAnimation, child) {
                         // Your existing transition if you still want to apply it

@@ -1,8 +1,10 @@
 import 'package:drive_mate/Buy%20Vehicle/Buy.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
 import 'package:drive_mate/Nav%20Bar/Wallet.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -179,26 +181,163 @@ backgroundColor: Colors.white,
 
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: Container(
               height: 377,
-
               decoration: BoxDecoration(
-
                 borderRadius: BorderRadius.all(Radius.circular(16)),
-                  gradient: LinearGradient(
-                    colors: [
-                      const Color(0xff6763EE)
-                          .withOpacity(0.7), // Purple with 67% opacity
-                      const Color(0xff6763EE)
-                          .withOpacity(1), // Purple with 100% opacity
-                    ],
-                  ),
+                gradient: LinearGradient(
+                  colors: [
+                    const Color(0xff6763EE).withOpacity(0.7), // Purple with 67% opacity
+                    const Color(0xff6763EE).withOpacity(1), // Purple with 100% opacity
+                  ],
+                ),
               ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Container(
+                        height: 98,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xffFFFFFF).withOpacity(0.5),
+                          ),
+                          color: Color(0xff1D1D1D).withOpacity(0.15),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Row(
+                          children: [
+                            const Spacer(flex: 2),
+                            Image.asset('assets/pictures/blackcar.png'),
+                            Spacer(flex: 2),
+                            const Text(
+                              'Ford Mustang\n2023 A34567',
+                              style: TextStyle(
+                                fontFamily: 'Poppins Semibold',
+                                fontSize: 14,
+                                color: Color(0xffFFFFFF),
+                              ),
+                            ),
+                            const Spacer(flex: 5),
+                            SvgPicture.asset('assets/icons/memory_plus.svg'),
+                            const Spacer(flex: 2),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+
+
+                  const Padding(
+                    padding: EdgeInsets.only(left: 18.0),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+
+                          Text('Your insurance expires on', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xffFFFFFF),),),
+
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 20,
+                  ),
+
+
+
+                  //Missing
+
+
+
+                  const SizedBox(
+                    height: 20,
+                  ),
+
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                    child: Row(
+                      children: [
+                        const Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('07 January, 2024', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xffFFFFFF),),),
+                            Text('Stay protected', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xffFFFFFF),),),
+                          ],
+                        ),
+
+                        const Spacer(),
+                        Container(
+                          height: 30,
+                          width: 76,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                          ),
+                          child: const Center(
+                            child: Text('Renew',
+                              style: TextStyle(
+                                fontFamily: 'Poppins Regular',
+                                fontSize: 12,
+                                color: Color(0xff6763EE),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+
+                  const Padding(
+                    padding: EdgeInsets.only(left: 18.0),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+
+                          Text('Registration sticker expires on', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xffFFFFFF),),),
+
+                        ],
+                      ),
+                    ),
+                  ),
+
+
+
+
+
+                  const SizedBox(
+                    height: 20,
+                  ),
+
+
+
+                  //Missing
+
+
+
+                  const SizedBox(
+                    height: 20,
+                  ),
 
 
 
@@ -206,63 +345,48 @@ backgroundColor: Colors.white,
 
 
 
-              // child: Container(
-              //   height: 110,
-              //   decoration: BoxDecoration(
-              //       border: Border.all(
-              //           color: Color(0xffFFFFFF).withOpacity(0.5)),
-              //       color: Color(0xff1D1D1D).withOpacity(0.15),
-              //       borderRadius: BorderRadius.all(Radius.circular(20))
-              //   ),
-              //
-              //   child: Row(
-              //     children: [
-              //       const Spacer(flex: 2,),
-              //       Image.asset('assets/pictures/blackcar.png'),
-              //       Spacer(flex: 2,),
-              //       const Text(
-              //         'Ford Mustang\n2023 A34567',
-              //         style: TextStyle(
-              //             fontFamily: 'Poppins Semibold',
-              //             fontSize: 14,
-              //             color: Color(0xffFFFFFF)),
-              //       ),
-              //       const Spacer(flex: 5),
-              //       SvgPicture.asset('assets/icons/memory_plus.svg'),
-              //       const Spacer(flex: 2),
-              //     ],
-              //   ),
-              //
-              // ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                    child: Row(
+                      children: [
+                        const Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('20 January, 2024', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xffFFFFFF),),),
+                          ],
+                        ),
 
 
 
+                        const Spacer(),
+                        Container(
+                          height: 30,
+                          width: 76,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                          ),
+                          child: const Center(
+                            child: Text('Renew',
+                              style: TextStyle(
+                                fontFamily: 'Poppins Regular',
+                                fontSize: 12,
+                                color: Color(0xff6763EE),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
 
-
-
-
-
-
-
-
-
-
-
+                ],
+              ),
             ),
           ),
-
-
-
-
-
-
-
-
-
-
         ],
       ),
-
 
 
 

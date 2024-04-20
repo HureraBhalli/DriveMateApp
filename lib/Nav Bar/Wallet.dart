@@ -1,15 +1,12 @@
-
-
 import 'dart:ui';
-
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
-
 
 
 
@@ -183,35 +180,37 @@ class _WalletState extends State<Wallet> {
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: Row(
               children: [
-                Container(
-                  height: 80,
-                  width: screenWidth * 0.437,
-
-                  decoration: BoxDecoration(
-                    border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Color(0xff6763EE).withOpacity(0.15),
-                  ),
-
-
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 18.0),
-                    child: Row(
-
-                      children: [
-                        SvgPicture.asset('assets/icons/Earn.svg'),
-
-                        const Padding(
-                          padding: EdgeInsets.only(top: 18.0, left: 10.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Balance', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12),),
-                              Text('\$2340.00', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),),
-                            ],
+                Expanded(
+                  child: Container(
+                    height: 80,
+                    
+                  
+                    decoration: BoxDecoration(
+                      border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
+                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      color: Color(0xff6763EE).withOpacity(0.15),
+                    ),
+                  
+                  
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 18.0),
+                      child: Row(
+                  
+                        children: [
+                          SvgPicture.asset('assets/icons/Earn.svg'),
+                  
+                          const Padding(
+                            padding: EdgeInsets.only(top: 18.0, left: 10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Earned', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12),),
+                                Text('\$2340.00', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -225,37 +224,39 @@ class _WalletState extends State<Wallet> {
 
 
 
-                Container(
-                  height: 80,
-                  width: screenWidth * 0.437,
-
-                  decoration: BoxDecoration(
-                    border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Color(0xff6763EE).withOpacity(0.15),
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 18.0),
-                    child: Row(
-
-                      children: [
-                        SvgPicture.asset('assets/icons/Redeem.svg'),
-
-                        const Padding(
-                          padding: EdgeInsets.only(top: 18.0, left: 10.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Balance', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12),),
-                              Text('\$12,234.00', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),),
-                            ],
-                          ),
-                        ),
-                      ],
+                Expanded(
+                  child: Container(
+                    height: 80,
+                    
+                  
+                    decoration: BoxDecoration(
+                      border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
+                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      color: Color(0xff6763EE).withOpacity(0.15),
                     ),
+                  
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 18.0),
+                      child: Row(
+                  
+                        children: [
+                          SvgPicture.asset('assets/icons/Redeem.svg'),
+                  
+                          const Padding(
+                            padding: EdgeInsets.only(top: 18.0, left: 10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Redeemed', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12),),
+                                Text('\$12,234.00', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  
                   ),
-
                 )
               ],
             ),
@@ -277,109 +278,111 @@ class _WalletState extends State<Wallet> {
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: Row(
               children: [
-                Container(
-                  height: 211,
-                  width: screenWidth * 0.437,
-
-                  decoration: BoxDecoration(
-                    border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Color(0xff6763EE).withOpacity(0.15),
-                  ),
-
-
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 18.0, top: 18.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text('Rewards', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
-                            const Spacer(
-                              flex: 3,
-                            ),
-                            SvgPicture.asset('assets/icons/NextBack.svg'),
-                            const Spacer(
-                              flex: 1,
-                            ),
-                          ],
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
-
-
-                        Row(
-                          children: [
-
-                            Container(
-                              height: 40,
-                              width: 40,
-
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(12)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 0.1,
-                                    blurRadius: 0.1,
-                                    offset: Offset(0, 1), // changes position of shadow
-                                  ),
-                                ],
-                                //boxShadow: BoxDecoration(4),
-                              ),
-                              child: SvgPicture.asset('assets/icons/CarWash.svg',   fit: BoxFit.none,),
-                            ),
-
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            Text('Free Car\nWash ', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
-
-                          ],
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
-
-                        const Row(
-                          children: [
-                            Text('42% reached', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16),),
-                          ],
-                        ),
-
-
-                        const SizedBox(
-                          height: 12,
-                        ),
-
-
-
-                        //Linear Progress Bar
-
-
-
-                        const SizedBox(
-                          height: 12,
-                        ),
-
-
-                        const Row(
-                          children: [
-                            Text('\$20 out of \$250', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
-                          ],
-                        ),
-
-
-
-                      ],
-
+                Expanded(
+                  child: Container(
+                    height: 211,
+                    
+                  
+                    decoration: BoxDecoration(
+                      border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
+                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      color: Color(0xff6763EE).withOpacity(0.15),
                     ),
+                  
+                  
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 18.0, top: 18.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text('Rewards', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
+                              const Spacer(
+                                flex: 3,
+                              ),
+                              SvgPicture.asset('assets/icons/NextBack.svg'),
+                              const Spacer(
+                                flex: 1,
+                              ),
+                            ],
+                          ),
+                  
+                          const SizedBox(
+                            height: 20,
+                          ),
+                  
+                  
+                          Row(
+                            children: [
+                  
+                              Container(
+                                height: 40,
+                                width: 40,
+                  
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 0.1,
+                                      blurRadius: 0.1,
+                                      offset: Offset(0, 1), // changes position of shadow
+                                    ),
+                                  ],
+                                  //boxShadow: BoxDecoration(4),
+                                ),
+                                child: SvgPicture.asset('assets/icons/CarWash.svg',   fit: BoxFit.none,),
+                              ),
+                  
+                              const SizedBox(
+                                width: 12,
+                              ),
+                              Text('Free Car\nWash ', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
+                  
+                            ],
+                          ),
+                  
+                          const SizedBox(
+                            height: 20,
+                          ),
+                  
+                          const Row(
+                            children: [
+                              Text('42% reached', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16),),
+                            ],
+                          ),
+                  
+                  
+                          const SizedBox(
+                            height: 12,
+                          ),
+                  
+                  
+                  
+                          //Linear Progress Bar
+                  
+                  
+                  
+                          const SizedBox(
+                            height: 12,
+                          ),
+                  
+                  
+                          const Row(
+                            children: [
+                              Text('\$20 out of \$250', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
+                            ],
+                          ),
+                  
+                  
+                  
+                        ],
+                  
+                      ),
+                    ),
+                  
                   ),
-
                 ),
 
 
@@ -391,36 +394,37 @@ class _WalletState extends State<Wallet> {
 
 
 
-                Container(
-                  height: 211,
-                  width: screenWidth * 0.437,
-
-                  decoration: BoxDecoration(
-                    border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Color(0xff6763EE).withOpacity(0.15),
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 18.0, top: 18.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text('Earnings', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
-                            const Spacer(
-                              flex: 3,
-                            ),
-                            SvgPicture.asset('assets/icons/NextBack.svg'),
-                            const Spacer(
-                              flex: 1,
-                            ),
-                          ],
-                        ),
-                      ],
+                Expanded(
+                  child: Container(
+                    height: 211,
+                  
+                    decoration: BoxDecoration(
+                      border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
+                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      color: Color(0xff6763EE).withOpacity(0.15),
                     ),
+                  
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 18.0, top: 18.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text('Earnings', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
+                              const Spacer(
+                                flex: 3,
+                              ),
+                              SvgPicture.asset('assets/icons/NextBack.svg'),
+                              const Spacer(
+                                flex: 1,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  
                   ),
-
                 )
               ],
             ),

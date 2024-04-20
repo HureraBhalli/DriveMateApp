@@ -266,8 +266,8 @@ class _WelcomeState extends State<Welcome> {
                 title: 'Get Started', onpress: () {
               Navigator.of(context).push(PageRouteBuilder(
                 pageBuilder: (context, animation, secondaryAnimation) => Home(),
-                transitionDuration: Duration(milliseconds:220),
-                reverseTransitionDuration: Duration(milliseconds: 220),
+                transitionDuration: Duration(milliseconds: 120),
+                reverseTransitionDuration: Duration(milliseconds: 120),
                 transitionsBuilder: (context, animation, secondaryAnimation, child) {
                   // Your existing transition if you still want to apply it
                   var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
