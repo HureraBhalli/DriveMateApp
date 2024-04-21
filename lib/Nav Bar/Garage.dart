@@ -1,6 +1,7 @@
 import 'package:drive_mate/Buy%20Vehicle/Buy.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
 import 'package:drive_mate/Nav%20Bar/Wallet.dart';
+import 'package:drive_mate/Sign%20Up/Add%20Vehicle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
@@ -227,7 +228,26 @@ class _GarageState extends State<Garage> {
                                 ),
                               ),
                               const Spacer(flex: 5),
-                              SvgPicture.asset('assets/icons/memory_plus.svg'),
+                              GestureDetector(
+                                child: SvgPicture.asset('assets/icons/memory_plus.svg'),
+                                onTap: ()
+                                {
+                                  Navigator.of(context).push(PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) => AddVehicle(),
+                                    transitionDuration: Duration(milliseconds:120),
+                                    reverseTransitionDuration: Duration(milliseconds: 120),
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Your existing transition if you still want to apply it
+                                      var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                          .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                                      return ScaleTransition(
+                                        scale: scaleTween,
+                                        child: child,
+                                      );
+                                    },
+                                  ));
+                                },
+                              ),
                               const Spacer(flex: 2),
                             ],
                           ),

@@ -12,11 +12,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 
 
-class SignUp extends StatelessWidget {
+class AddVehicle extends StatelessWidget {
 
-  static const String id = 'Sign Up';
+  static const String id = 'Add Vehicle';
 
-  const SignUp({super.key});
+  const AddVehicle({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,21 +28,24 @@ class SignUp extends StatelessWidget {
             height: MediaQuery.of(context).size.height,
             child: Column(
               children: [
-                Spacer(flex: 2),
-                Image.asset('assets/icons/Drive_SignUp.png'),
                 const SizedBox(
-                  height: 30,
+                  height: 100,
                 ),
                 const Align(
-                  alignment: Alignment.centerLeft,
+                    alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 28.0),
-                      child: Text('Sign Up', style: TextStyle(fontSize: 18, fontFamily: 'Poppins Semibold'),),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('New Vehicle Registration!', style: TextStyle(fontSize: 18, fontFamily: 'Poppins Semibold'),),
+                          Text('New Vehicle Registration!', style: TextStyle(fontSize: 10, fontFamily: 'Poppins Regular'),),
+
+
+                        ],
+                      ),
                     )),
 
-                SizedBox(
-                  height: 22,
-                ),
 
 
                 Padding(
@@ -50,6 +53,9 @@ class SignUp extends StatelessWidget {
                   child: Column(
                     children: [
 
+                      SizedBox(
+                        height: 30,
+                      ),
 
                       Container(
                         height: 60,
@@ -255,7 +261,7 @@ class SignUp extends StatelessWidget {
 
 
 
-                const Spacer(flex: 4),
+                const Spacer(flex: 3),
 
 
                 GestureDetector(
@@ -281,7 +287,7 @@ class SignUp extends StatelessWidget {
 
 
 
-                const Spacer(flex: 2),
+                const Spacer(flex: 1),
 
 
               ],

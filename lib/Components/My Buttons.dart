@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-
+//import 'package:file_picker/file_picker.dart';
 
 
 //My Buttons
@@ -53,4 +53,61 @@ class MyButton extends StatelessWidget {
 
 
 
-
+// Import file_picker package
+//
+// class FileUploadTextField extends StatefulWidget {
+//   @override
+//   _FileUploadTextFieldState createState() => _FileUploadTextFieldState();
+// }
+//
+// class _FileUploadTextFieldState extends State<FileUploadTextField> {
+//   String _fileName = ''; // Initialize _fileName to an empty string
+//
+//   Future<void> _pickFile() async {
+//     FilePickerResult? result = await FilePicker.platform.pickFiles();
+//
+//     if (result != null) {
+//       setState(() {
+//         _fileName = result.files.single.name!;
+//       });
+//     }
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       height: 60,
+//       child: TextField(
+//         readOnly: true, // Make the TextField non-editable
+//         onTap: _pickFile,
+//         decoration: InputDecoration(
+//          // filled: true,
+//           fillColor: Color(0xffFAFAFA),
+//           enabledBorder: OutlineInputBorder(
+//             borderRadius: BorderRadius.circular(14.0),
+//             borderSide: BorderSide(color: Color(0xff000200).withOpacity(0.5), width: 1),
+//           ),
+//           focusedBorder: OutlineInputBorder(
+//             borderRadius: BorderRadius.circular(14.0),
+//             borderSide: BorderSide(color: Color(0xff999A99), width: 1.6),
+//
+//           ),
+//
+//
+//           prefixIcon: Padding(
+//             padding: const EdgeInsets.only(left: 18.0, right: 12),
+//             child: Image.asset('assets/signup/Upload.png', width: 24, height: 24,),
+//           ),
+//
+//           labelText: 'Click to Upload vehicle photos',
+//           labelStyle: TextStyle(
+//             fontFamily: 'Poppins Regular',
+//             fontSize: 14,
+//             color: Color(0xff000200).withOpacity(0.7),
+//           ),
+//         ),
+//         controller: TextEditingController(text: _fileName),
+//       ),
+//     );
+//   }
+// }

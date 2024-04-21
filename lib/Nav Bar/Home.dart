@@ -4,6 +4,7 @@ import 'package:drive_mate/Components/My%20Buttons.dart';
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
 import 'package:drive_mate/Nav%20Bar/Wallet.dart';
+import 'package:drive_mate/Sign%20Up/Add%20Vehicle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -23,44 +24,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
-
-  // void _onItemTapped(int index) {
-  //   switch (index) {
-  //     case 0:
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(builder: (context) => Home()),
-  //       );
-  //       break;
-  //     case 1:
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(builder: (context) => Garage()),
-  //       );
-  //       break;
-  //
-  //     case 2:
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(builder: (context) => Wallet()),
-  //       );
-  //       break;
-  //
-  //     case 3:
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(builder: (context) => Profile()),
-  //       );
-  //       break;
-  //
-  //   // Add cases for other pages here...
-  //   }
-  //
-  //
-  //       {
-  //     _selectedIndex = index;
-  //   }
-  // }
 
 
   void _onItemTapped(int index) {
@@ -307,8 +270,36 @@ class _HomeState extends State<Home> {
                               color: Color(0xffFFFFFF)),
                         ),
                         const Spacer(flex: 5),
-                        SvgPicture.asset('assets/icons/memory_plus.svg'),
+
+
+
+
+                    GestureDetector(
+                      child: SvgPicture.asset('assets/icons/memory_plus.svg'),
+                      onTap: ()
+                      {
+                        Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) => AddVehicle(),
+                          transitionDuration: Duration(milliseconds:120),
+                          reverseTransitionDuration: Duration(milliseconds: 120),
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            // Your existing transition if you still want to apply it
+                            var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                            return ScaleTransition(
+                              scale: scaleTween,
+                              child: child,
+                            );
+                          },
+                        ));
+                      },
+                    ),
+
+
+
                         const Spacer(flex: 2),
+
+
                       ],
                     ),
                   ),
