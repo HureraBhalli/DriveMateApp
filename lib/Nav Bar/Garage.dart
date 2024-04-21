@@ -281,6 +281,19 @@ class _GarageState extends State<Garage> {
         
         
                     //Missing
+
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 18.0),
+                      child: LinearProgressIndicator(
+                        value: 0.8,
+                        minHeight: 4,
+                        backgroundColor: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(2)),
+                        valueColor: AlwaysStoppedAnimation<Color>(Color(0xff42FF00)),
+                      ),
+
+                    ),
+
         
         
         
@@ -354,10 +367,8 @@ class _GarageState extends State<Garage> {
         
                     //Missing
 
-
-
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 18.0),
                           child: LinearProgressIndicator(
                             value: 0.3,
                             minHeight: 4,
