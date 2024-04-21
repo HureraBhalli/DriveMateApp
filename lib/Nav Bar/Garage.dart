@@ -330,12 +330,27 @@ class _GarageState extends State<Garage> {
                       height: 20,
                     ),
         
-        
+
         
                     //Missing
-        
-        
-        
+
+
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                          child: LinearProgressIndicator(
+                            value: 0.3,
+                            minHeight: 4,
+                            backgroundColor: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(2)),
+                            valueColor: AlwaysStoppedAnimation<Color>(Color(0xff42FF00)),
+                          ),
+
+                        ),
+
+
+
+
                     const SizedBox(
                       height: 20,
                     ),
@@ -357,8 +372,8 @@ class _GarageState extends State<Garage> {
                               Text('20 January, 2024', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xffFFFFFF),),),
                             ],
                           ),
-        
-        
+
+
         
                           const Spacer(),
                           Container(
@@ -399,7 +414,7 @@ class _GarageState extends State<Garage> {
             Column(
               children: [
                 Container(
-                  height: 410,
+                  height: 450,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -416,62 +431,213 @@ class _GarageState extends State<Garage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 18,
                           ),
                           Text('Redeem at',  style: TextStyle( fontFamily: 'Poppins Semibold',  fontSize: 18,  color: Color(0xff6763EE),),),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Row(
                             children: [
                               Expanded(child: Container(
                                 height: 150,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.all(Radius.circular(18)),
                                 ),
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    Text('Oil Next',  style: TextStyle( fontFamily: 'Poppins Semibold',  fontSize: 14,  color: Color(0xff6763EE),),),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    SvgPicture.asset('assets/icons/Oil.svg'),
-                                  ],
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                                  child: Column(
+                                    children: [
+                                      const SizedBox(
+                                        height: 12,
+                                      ),
+                                      Text('Oil Next',  style: TextStyle( fontFamily: 'Poppins Semibold',  fontSize: 14,  color: Color(0xff6763EE),),),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      SvgPicture.asset('assets/icons/Oil.svg'),
+
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+
+                                      const LinearProgressIndicator(
+                                        value: 0.78,
+                                        backgroundColor:  Color(0xffDEDEDE),
+                                        borderRadius: BorderRadius.all(Radius.circular(6)),
+                                        minHeight: 23,
+                                        valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                                      ),
+
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+
+                                      Text('23 January, 2024',  style: TextStyle( fontFamily: 'Poppins Regular',  fontSize: 12,  color: Color(0xff6763EE),),),
+
+
+                                    ],
+                                  ),
                                 ),
                               )
                               ),
-                              SizedBox(
+
+
+                              const SizedBox(
                                 width: 12,
                               ),
 
+
+
+                              //Tire Next
                               Expanded(child: Container(
                                 height: 150,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.all(Radius.circular(18)),
                                 ),
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    Text('Tires Next',  style: TextStyle( fontFamily: 'Poppins Semibold',  fontSize: 14,  color: Color(0xff6763EE),),),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    SvgPicture.asset('assets/icons/Tire.svg'),
-                                  ],
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                                  child: Column(
+                                    children: [
+                                      const SizedBox(
+                                        height: 12,
+                                      ),
+                                      const Text('Tires Next',  style: TextStyle( fontFamily: 'Poppins Semibold',  fontSize: 14,  color: Color(0xff6763EE),),),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      SvgPicture.asset('assets/icons/Tire.svg'),
+
+
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+
+                                      const LinearProgressIndicator(
+                                        value: 0.60,
+                                        backgroundColor:  Color(0xffDEDEDE),
+                                        borderRadius: BorderRadius.all(Radius.circular(6)),
+                                        minHeight: 23,
+                                        valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                                      ),
+
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+
+                                      Text('29 April, 2024',  style: TextStyle( fontFamily: 'Poppins Regular',  fontSize: 12,  color: Color(0xff6763EE),),),
+
+
+                                    ],
+                                  ),
                                 ),
 
                               )),
 
                             ],
-                          )
+                          ),
+
+                          const SizedBox(
+                            height: 20,
+                          ),
+
+
+                          //Get Help Now
+                          const Text('Get Help Now',  style: TextStyle( fontFamily: 'Poppins Semibold',  fontSize: 18,  color: Color(0xff6763EE),),),
+
+                          const SizedBox(
+                            height: 10,
+                          ),
+
+                          //Get Help Box
+
+                          Container(
+                            height: 160,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(26)),
+                              gradient: LinearGradient(
+                                colors: [
+                                  const Color(0xff6763EE)
+                                      .withOpacity(0.7), // Purple with 67% opacity
+                                  const Color(0xff6763EE)
+                                      .withOpacity(1), // Purple with 100% opacity
+                                ],
+                              ),
+                            ),
+
+
+
+                            child: Padding(
+                              padding: const EdgeInsets.all(18.0),
+                              child: Container(
+                                height: 20,
+
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color(0xffFFFFFF).withOpacity(0.5)),
+                                    color: Color(0xff1D1D1D).withOpacity(0.15),
+                                    borderRadius: const BorderRadius.all(Radius.circular(20))
+                                ),
+
+
+
+                                child: Row(
+
+                                  children: [
+                                    const Spacer(
+                                      flex: 2,
+                                    ),
+                                    Image.asset('assets/pictures/Jeep.png'),
+
+                                    Spacer(
+                                      flex: 2,
+                                    ),
+
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Text(
+                                          '24/7 Support',
+                                          style: TextStyle(
+                                              fontFamily: 'Poppins Semibold',
+                                              fontSize: 14,
+                                              color: Color(0xffFFFFFF)),
+                                        ),
+
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        Container(
+                                          child: Center(
+                                              child: Text('Contact Us', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xff6763EE)),)),
+                                          height: 30,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+
+
+                                    const Spacer(flex: 2),
+                                  ],
+
+                                ),
+                              ),
+                            ),
+                          ),
+
+
+
+
+
+
                         ],
                       ),
                     ),

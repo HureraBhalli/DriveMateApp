@@ -180,6 +180,10 @@ class _WalletState extends State<Wallet> {
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: Row(
               children: [
+
+                //Conaitner Earned
+
+
                 Expanded(
                   child: Container(
                     height: 80,
@@ -224,6 +228,8 @@ class _WalletState extends State<Wallet> {
 
 
 
+                //Conaitner Redeemed
+
                 Expanded(
                   child: Container(
                     height: 80,
@@ -248,7 +254,7 @@ class _WalletState extends State<Wallet> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text('Redeemed', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12),),
-                                Text('\$12,234.00', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),),
+                                Text('\$1234.00', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE)),),
                               ],
                             ),
                           ),
@@ -291,14 +297,14 @@ class _WalletState extends State<Wallet> {
                   
                   
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, top: 18.0),
+                      padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0),
                       child: Column(
                         children: [
                           Row(
                             children: [
-                              Text('Rewards', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
+                              const Text('Rewards', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
                               const Spacer(
-                                flex: 3,
+                                flex: 70,
                               ),
                               SvgPicture.asset('assets/icons/NextBack.svg'),
                               const Spacer(
@@ -314,7 +320,11 @@ class _WalletState extends State<Wallet> {
                   
                           Row(
                             children: [
-                  
+
+                              //Conaitner Reward
+
+
+
                               Container(
                                 height: 40,
                                 width: 40,
@@ -361,7 +371,15 @@ class _WalletState extends State<Wallet> {
                   
                   
                           //Linear Progress Bar
-                  
+
+
+                          const LinearProgressIndicator(
+                            value: 0.42,
+                            backgroundColor:  Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(6)),
+                            minHeight: 6,
+                            valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                          ),
                   
                   
                           const SizedBox(
@@ -394,6 +412,8 @@ class _WalletState extends State<Wallet> {
 
 
 
+                //Conaitner Earning
+
                 Expanded(
                   child: Container(
                     height: 211,
@@ -405,21 +425,120 @@ class _WalletState extends State<Wallet> {
                     ),
                   
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 18.0, top: 18.0),
+                      padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0,),
                       child: Column(
                         children: [
                           Row(
                             children: [
                               Text('Earnings', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
                               const Spacer(
-                                flex: 3,
+                                flex: 70,
                               ),
                               SvgPicture.asset('assets/icons/NextBack.svg'),
-                              const Spacer(
-                                flex: 1,
-                              ),
+
+
                             ],
                           ),
+
+
+
+                          const SizedBox(
+                            height: 20,
+                          ),
+
+                          const Row(
+                            children: [
+                              Text('42%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
+
+                              Text(' Referrals', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
+
+                            ],
+                          ),
+
+
+                          const SizedBox(
+                            height: 6,
+                          ),
+
+                          //Linear Progress Bar
+
+                          const LinearProgressIndicator(
+                            value: 0.42,
+                            backgroundColor:  Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(6)),
+                            minHeight: 6,
+                            valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                          ),
+
+
+                          const SizedBox(
+                            height: 20,
+                          ),
+
+                          const Row(
+                            children: [
+                              Text('23%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
+
+                              Text(' Cash Back', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
+
+                            ],
+                          ),
+
+
+                          const SizedBox(
+                            height: 6,
+                          ),
+
+                          //Linear Progress Bar
+
+                          const LinearProgressIndicator(
+                            value: 0.23,
+                            backgroundColor:  Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(6)),
+                            minHeight: 6,
+                            valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                          ),
+
+
+
+                          const SizedBox(
+                            height: 20,
+                          ),
+
+                          const Row(
+                            children: [
+                              Text('12%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
+
+                              Text(' Rewards', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
+
+                            ],
+                          ),
+
+
+                          const SizedBox(
+                            height: 6,
+                          ),
+
+                          //Linear Progress Bar
+
+                          const LinearProgressIndicator(
+                            value: 0.12,
+                            backgroundColor:  Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(6)),
+                            minHeight: 6,
+                            valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                          ),
+
+
+
+
+
+
+
+
+
+
+
                         ],
                       ),
                     ),

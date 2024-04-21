@@ -243,9 +243,6 @@ class _HomeState extends State<Home> {
                       ),
                     ),
 
-                    // Text('Search for ', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-                    // Text('services', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff6763EE)), ),
-                    // Text('... ', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
 
                     Padding(
                       padding: const EdgeInsets.only(right: 20.0),
@@ -258,6 +255,9 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 30,
             ),
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Container(
@@ -285,7 +285,7 @@ class _HomeState extends State<Home> {
                         border: Border.all(
                             color: Color(0xffFFFFFF).withOpacity(0.5)),
                         color: Color(0xff1D1D1D).withOpacity(0.15),
-                        borderRadius: BorderRadius.all(Radius.circular(20))
+                        borderRadius: const BorderRadius.all(Radius.circular(20))
                     ),
 
 
