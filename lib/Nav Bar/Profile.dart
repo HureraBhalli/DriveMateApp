@@ -1,3 +1,4 @@
+import 'package:drive_mate/Components/My%20Buttons.dart';
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Nav%20Bar/Wallet.dart';
@@ -255,6 +256,12 @@ class _ProfileState extends State<Profile> {
           ),
 
 
+
+          //ButtonsList
+
+
+
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: Column(
@@ -421,7 +428,7 @@ class _ProfileState extends State<Profile> {
                   height: 12,
                 ),
 
-                //Mobile
+                //Notification
                 Container(
                   height: 54,
                   width: double.infinity,
@@ -447,7 +454,7 @@ class _ProfileState extends State<Profile> {
 
 
 
-                        //Button Pneding
+                        //Button Pending
 
 
 
@@ -466,13 +473,11 @@ class _ProfileState extends State<Profile> {
 
 
 
-
-
                 const SizedBox(
                   height: 12,
                 ),
 
-                //Mobile
+                //Help
                 Container(
                   height: 54,
                   width: double.infinity,
@@ -485,19 +490,19 @@ class _ProfileState extends State<Profile> {
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
                     child: Row(
                       children: [
-                        SvgPicture.asset('assets/icons/Mobile.svg'),
+                        SvgPicture.asset('assets/icons/Help.svg'),
                         const SizedBox(
                           width: 12,
                         ),
-                        const Text('Mobile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                        const Text('Help', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
                         const Spacer(
                           flex: 1,
                         ),
-                        const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        SvgPicture.asset('assets/icons/Forward.svg'),
+                       // const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                       //  const SizedBox(
+                       //    width: 12,
+                       //  ),
+                     //   SvgPicture.asset('assets/icons/Forward.svg'),
                       ],
                     ),
                   ),
@@ -509,15 +514,47 @@ class _ProfileState extends State<Profile> {
 
 
 
-
-
-
-
-
               ],
             ),
           ),
 
+
+
+
+
+
+          const SizedBox(
+            height: 10,
+          ),
+
+
+
+          //Button
+          GestureDetector(
+            child: MyButton(
+              title: 'Track my car!',
+
+              onpress: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) => Profile(),
+                  transitionDuration: Duration(milliseconds: 120),
+                  reverseTransitionDuration: Duration(milliseconds: 120),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    // Your existing transition if you still want to apply it
+                    var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                        .animate(CurvedAnimation(
+                        parent: animation,
+                        curve: Curves.linearToEaseOut));
+                    return ScaleTransition(
+                      scale: scaleTween,
+                      child: child,
+                    );
+                  },
+                ));
+              },
+            ),
+          ),
 
 
 
