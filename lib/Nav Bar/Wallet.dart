@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
+import 'package:drive_mate/Short%20Flow/Earning.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -425,133 +426,157 @@ class _WalletState extends State<Wallet> {
 
                   //Conaitner Earning
 
+
+
                   Expanded(
-                    child: Container(
-                      height: 211,
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) => Earning(),
+                          transitionDuration: Duration(milliseconds: 120),
+                          reverseTransitionDuration: Duration(milliseconds: 120),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            // Your existing transition if you still want to apply it
+                            var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                .animate(CurvedAnimation(
+                                parent: animation,
+                                curve: Curves.linearToEaseOut));
+                            return ScaleTransition(
+                              scale: scaleTween,
+                              child: child,
+                            );
+                          },
+                        ));
+                      },
+                      child: Container(
 
-                      decoration: BoxDecoration(
-                        border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
-                        borderRadius: BorderRadius.all(Radius.circular(16)),
-                        color: Color(0xff6763EE).withOpacity(0.15),
-                      ),
+                        height: 211,
 
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0,),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text('Earnings', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
-                                const Spacer(
-                                  flex: 70,
-                                ),
-                                SvgPicture.asset('assets/icons/NextBack.svg'),
-
-
-                              ],
-                            ),
-
-
-
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            const Row(
-                              children: [
-                                Text('42%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-
-                                Text(' Referrals', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
-
-                              ],
-                            ),
-
-
-                            const SizedBox(
-                              height: 6,
-                            ),
-
-                            //Linear Progress Bar
-
-                            const LinearProgressIndicator(
-                              value: 0.42,
-                              backgroundColor:  Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(6)),
-                              minHeight: 6,
-                              valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
-                            ),
-
-
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            const Row(
-                              children: [
-                                Text('23%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-
-                                Text(' Cash Back', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
-
-                              ],
-                            ),
-
-
-                            const SizedBox(
-                              height: 6,
-                            ),
-
-                            //Linear Progress Bar
-
-                            const LinearProgressIndicator(
-                              value: 0.23,
-                              backgroundColor:  Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(6)),
-                              minHeight: 6,
-                              valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
-                            ),
-
-
-
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            const Row(
-                              children: [
-                                Text('12%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-
-                                Text(' Rewards', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
-
-                              ],
-                            ),
-
-
-                            const SizedBox(
-                              height: 6,
-                            ),
-
-                            //Linear Progress Bar
-
-                            const LinearProgressIndicator(
-                              value: 0.12,
-                              backgroundColor:  Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(6)),
-                              minHeight: 6,
-                              valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
-                            ),
-
-
-
-
-
-
-
-
-
-                          ],
+                        decoration: BoxDecoration(
+                          border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Color(0xff6763EE).withOpacity(0.15),
                         ),
-                      ),
 
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0,),
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text('Earnings', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
+                                  const Spacer(
+                                    flex: 70,
+                                  ),
+                                  SvgPicture.asset('assets/icons/NextBack.svg'),
+
+
+                                ],
+                              ),
+
+
+
+                              const SizedBox(
+                                height: 20,
+                              ),
+
+                              const Row(
+                                children: [
+                                  Text('42%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
+
+                                  Text(' Referrals', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
+
+                                ],
+                              ),
+
+
+                              const SizedBox(
+                                height: 6,
+                              ),
+
+                              //Linear Progress Bar
+
+                              const LinearProgressIndicator(
+                                value: 0.42,
+                                backgroundColor:  Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(6)),
+                                minHeight: 6,
+                                valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                              ),
+
+
+                              const SizedBox(
+                                height: 20,
+                              ),
+
+                              const Row(
+                                children: [
+                                  Text('23%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
+
+                                  Text(' Cash Back', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
+
+                                ],
+                              ),
+
+
+                              const SizedBox(
+                                height: 6,
+                              ),
+
+                              //Linear Progress Bar
+
+                              const LinearProgressIndicator(
+                                value: 0.23,
+                                backgroundColor:  Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(6)),
+                                minHeight: 6,
+                                valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                              ),
+
+
+
+                              const SizedBox(
+                                height: 20,
+                              ),
+
+                              const Row(
+                                children: [
+                                  Text('12%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
+
+                                  Text(' Rewards', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
+
+                                ],
+                              ),
+
+
+                              const SizedBox(
+                                height: 6,
+                              ),
+
+                              //Linear Progress Bar
+
+                              const LinearProgressIndicator(
+                                value: 0.12,
+                                backgroundColor:  Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(6)),
+                                minHeight: 6,
+                                valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                              ),
+
+
+
+
+
+
+
+
+
+                            ],
+                          ),
+                        ),
+
+                      ),
                     ),
                   )
                 ],

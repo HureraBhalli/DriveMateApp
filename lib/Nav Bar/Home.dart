@@ -5,6 +5,7 @@ import 'package:drive_mate/Components/My%20Buttons.dart';
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
 import 'package:drive_mate/Nav%20Bar/Wallet.dart';
+import 'package:drive_mate/Short%20Flow/ReferFriend.dart';
 import 'package:drive_mate/Sign%20Up/Add%20Vehicle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -421,36 +422,57 @@ class _HomeState extends State<Home> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      width: screenWidth * 0.31,
-                      height: 133,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Color(0xff6763EE)),
-                          color: Color(0xff706CEF).withOpacity(0.15),
-                          borderRadius: BorderRadius.all(Radius.circular(14))),
-                      child: Column(
-                        children: [
-                          const SizedBox(
-                            height: 18,
-                          ),
-                          const Text('Cash Back',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins Regular',
-                                  fontSize: 12,
-                                  color: Colors.black)),
-                          const SizedBox(
-                            height: 4,
-                          ),
-                          Text('\$234.00',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins Bold',
-                                  fontSize: 22,
-                                  color: Color(0xff6763EE))),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          SvgPicture.asset('assets/icons/Dollar.svg'),
-                        ],
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) => Wallet(),
+                          transitionDuration: Duration(milliseconds: 120),
+                          reverseTransitionDuration: Duration(milliseconds: 120),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            // Your existing transition if you still want to apply it
+                            var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                .animate(CurvedAnimation(
+                                parent: animation,
+                                curve: Curves.linearToEaseOut));
+                            return ScaleTransition(
+                              scale: scaleTween,
+                              child: child,
+                            );
+                          },
+                        ));
+                    },
+                      child: Container(
+                        width: screenWidth * 0.31,
+                        height: 133,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Color(0xff6763EE)),
+                            color: Color(0xff706CEF).withOpacity(0.15),
+                            borderRadius: BorderRadius.all(Radius.circular(14))),
+                        child: Column(
+                          children: [
+                            const SizedBox(
+                              height: 18,
+                            ),
+                            const Text('Cash Back',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins Regular',
+                                    fontSize: 12,
+                                    color: Colors.black)),
+                            const SizedBox(
+                              height: 4,
+                            ),
+                            Text('\$234.00',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins Bold',
+                                    fontSize: 22,
+                                    color: Color(0xff6763EE))),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SvgPicture.asset('assets/icons/Dollar.svg'),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -480,26 +502,49 @@ class _HomeState extends State<Home> {
                       const SizedBox(
                         height: 12,
                       ),
-                      Container(
-                        height: 66,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Color(0xff6763EE)),
-                            color: Color(0xff706CEF).withOpacity(0.15),
-                            borderRadius: BorderRadius.all(Radius.circular(14))),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                          child: Row(
-                            children: [
-                              Text('Refer a Friend',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins Semibold',
-                                      fontSize: 14,
-                                      color: Color(0xff6763EE))),
-                              Spacer(
-                                flex: 2,
-                              ),
-                              SvgPicture.asset('assets/icons/Friend.svg'),
-                            ],
+                      GestureDetector(
+
+                        onTap: (){
+                          Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) => ReferFriend(),
+                            transitionDuration: Duration(milliseconds: 120),
+                            reverseTransitionDuration: Duration(milliseconds: 120),
+                            transitionsBuilder:
+                                (context, animation, secondaryAnimation, child) {
+                              // Your existing transition if you still want to apply it
+                              var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                  .animate(CurvedAnimation(
+                                  parent: animation,
+                                  curve: Curves.linearToEaseOut));
+                              return ScaleTransition(
+                                scale: scaleTween,
+                                child: child,
+                              );
+                            },
+                          ));
+                        },
+
+                        child: Container(
+                          height: 66,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Color(0xff6763EE)),
+                              color: Color(0xff706CEF).withOpacity(0.15),
+                              borderRadius: BorderRadius.all(Radius.circular(14))),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                            child: Row(
+                              children: [
+                                Text('Refer a Friend',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins Semibold',
+                                        fontSize: 14,
+                                        color: Color(0xff6763EE))),
+                                Spacer(
+                                  flex: 2,
+                                ),
+                                SvgPicture.asset('assets/icons/Friend.svg'),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -510,7 +555,8 @@ class _HomeState extends State<Home> {
                   width: 12,
                 ),
                 
-                
+
+
                 
                 Flexible(
                   flex: 2,
@@ -572,6 +618,10 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 30,
             ),
+
+
+
+
             GestureDetector(
               child: MyButton(
                 title: 'Book a Service!',

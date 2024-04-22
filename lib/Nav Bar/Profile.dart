@@ -102,6 +102,8 @@ class _ProfileState extends State<Profile> {
     _selectedIndex = index;
   }
 
+  bool isSwitched = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -259,7 +261,8 @@ class _ProfileState extends State<Profile> {
         
         
             //ButtonsList
-        
+
+
         
         
         
@@ -350,6 +353,7 @@ class _ProfileState extends State<Profile> {
                   const SizedBox(
                     height: 12,
                   ),
+
         
                   //Adress
                   Container(
@@ -389,7 +393,8 @@ class _ProfileState extends State<Profile> {
                   const SizedBox(
                     height: 12,
                   ),
-        
+
+
                   //Mobile
                   Container(
                     height: 54,
@@ -428,7 +433,8 @@ class _ProfileState extends State<Profile> {
                   const SizedBox(
                     height: 12,
                   ),
-        
+
+
                   //Notification
                   Container(
                     height: 54,
@@ -437,7 +443,7 @@ class _ProfileState extends State<Profile> {
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         color: Colors.white
                     ),
-        
+
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12.0),
                       child: Row(
@@ -448,32 +454,66 @@ class _ProfileState extends State<Profile> {
                           ),
                           const Text('Notification', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
                           const Spacer(
-                            flex: 1,
+                            flex: 10,
                           ),
-        
-        
-        
-        
-        
+
+
                           //Button Pending
-        
-        
-        
-        
-                          //const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                          const SizedBox(
-                            width: 12,
+
+                          Center(
+                            child: Transform.scale(
+                              scale: 0.8,
+                              child: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    isSwitched = !isSwitched;
+                                  });
+                                },
+                                child: Container(
+                                  width: 50.0,
+                                  height: 30.0,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                    color: isSwitched ? Color(0xff6763EE) : Color(0xff6763EE).withOpacity(0.5),
+                                  ),
+                                  child: Stack(
+                                    children: [
+                                      AnimatedPositioned(
+                                        duration: Duration(milliseconds: 200),
+                                        curve: Curves.easeInOut,
+                                        left: isSwitched ? 20.0 : 0.0,
+                                        child: Container(
+                                          width: 25.0,
+                                          height: 30.0,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.white,
+                                          ),
+
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
-                         // SvgPicture.asset('assets/icons/Forward.svg'),
+
+
+
+
+
+
+
                         ],
                       ),
                     ),
                   ),
-        
-        
-        
-        
-        
+
+
+
+
+
                   const SizedBox(
                     height: 12,
                   ),
@@ -525,42 +565,98 @@ class _ProfileState extends State<Profile> {
         
         
             const SizedBox(
-              height: 10,
+              height: 12,
             ),
-        
-        
-        
-            //Button
+
+
+
+
+
+
+
+
+
+            //Track My Car
+
             GestureDetector(
-              child: MyButton(
-                title: 'Track my car!',
-        
-                onpress: () {
-                  Navigator.of(context).push(PageRouteBuilder(
-                    pageBuilder: (context, animation, secondaryAnimation) => Profile(),
-                    transitionDuration: Duration(milliseconds: 120),
-                    reverseTransitionDuration: Duration(milliseconds: 120),
-                    transitionsBuilder:
-                        (context, animation, secondaryAnimation, child) {
-                      // Your existing transition if you still want to apply it
-                      var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
-                          .animate(CurvedAnimation(
-                          parent: animation,
-                          curve: Curves.linearToEaseOut));
-                      return ScaleTransition(
-                        scale: scaleTween,
-                        child: child,
-                      );
-                    },
-                  ));
-                },
+              onTap: () {
+
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) => Profile(),
+                  transitionDuration: Duration(milliseconds: 120),
+                  reverseTransitionDuration: Duration(milliseconds: 120),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    // Your existing transition if you still want to apply it
+                    var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                        .animate(CurvedAnimation(
+                        parent: animation,
+                        curve: Curves.linearToEaseOut));
+                    return ScaleTransition(
+                      scale: scaleTween,
+                      child: child,
+                    );
+                  },
+                ));
+              },
+
+
+
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                child: Container(
+                  height: 54,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color(0xff6763EE).withOpacity(0.7), // Red with 67% opacity
+                        Color(0xff6763EE).withOpacity(1), // Blue with 67% opacity
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+              
+                    borderRadius: BorderRadius.circular(20),
+                    // color: color,
+                  ),
+              
+                   child: Row(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                       SvgPicture.asset('assets/icons/LocationWhite.svg'),
+                       const SizedBox(
+                         width: 10,
+                       ),
+                       const Text('Track my car!', style: TextStyle(fontFamily: 'Poppins SemiBold', fontSize: 14, color: Colors.white),),
+                     ],
+                   ),
+                ),
               ),
             ),
-        
-        
-        
-        
-        
+
+
+
+
+            const SizedBox(
+              height: 20,
+            ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           ],
         
         ),
@@ -665,7 +761,7 @@ class _ProfileState extends State<Profile> {
                     label: 'Profile',
                   ),
                 ],
-                selectedLabelStyle: TextStyle(
+                selectedLabelStyle: const TextStyle(
                     fontFamily: 'Poppins Semibold',
                     fontSize: 12,
                     color: Color(0xffFFFFFF)),
