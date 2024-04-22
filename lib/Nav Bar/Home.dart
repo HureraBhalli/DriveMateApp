@@ -1,5 +1,6 @@
 // import 'dart:ffi';
 import 'dart:ui';
+import 'package:drive_mate/Buy%20Vehicle/Buy.dart';
 import 'package:drive_mate/Components/My%20Buttons.dart';
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
@@ -153,9 +154,32 @@ class _HomeState extends State<Home> {
                       color: Color(0xff6763EE),
                     ),
                   ),
-                  child: const CircleAvatar(
-                    radius: 24,
-                    backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+                  child: GestureDetector(
+
+                    onTap: ()
+                    {
+                      Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) => Profile(),
+                        transitionDuration: Duration(milliseconds:120),
+                        reverseTransitionDuration: Duration(milliseconds: 120),
+                        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                          // Your existing transition if you still want to apply it
+                          var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                              .animate(CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut));
+                          return ScaleTransition(
+                            scale: scaleTween,
+                            child: child,
+                          );
+                        },
+                      ));
+                    },
+
+
+
+                    child: const CircleAvatar(
+                      radius: 24,
+                      backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+                    ),
                   ),
                 ),
               ),

@@ -1,10 +1,13 @@
-
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Nav%20Bar/Wallet.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+
+
 
 class Profile extends StatefulWidget {
   static const String id = 'Profile';
@@ -16,15 +19,10 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-
-
-
-
   int _selectedIndex = 3;
 
   void _onItemTapped(int index) {
-    switch (index)
-    {
+    switch (index) {
       case 0:
         Navigator.pushReplacement(
           context,
@@ -79,7 +77,7 @@ class _ProfileState extends State<Profile> {
           ),
         );
         break;
-    // Add cases for other pages here...
+      // Add cases for other pages here...
       case 3:
         Navigator.pushReplacement(
           context,
@@ -103,79 +101,247 @@ class _ProfileState extends State<Profile> {
     _selectedIndex = index;
   }
 
-
-
-
-
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
+      backgroundColor: const Color(0xffF3F3F3),
+
+
+      // appBar: PreferredSize(
+      //   preferredSize: Size.fromHeight(70),
+      //   child: Container(
+      //     child: AppBar(
+      //       toolbarHeight: 70,
+      //       centerTitle: true,
+      //       title: const Text(
+      //         'Profile',
+      //         style: TextStyle(
+      //             fontFamily: 'Poppins Semibold',
+      //             fontSize: 16,
+      //             color: Colors.white),
+      //       ),
+      //       backgroundColor: Color(0xff6763EE),
+      //       actions: [
+      //         Padding(
+      //           padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      //           child: Container(
+      //             decoration: BoxDecoration(
+      //               shape: BoxShape.circle,
+      //               border: Border.all(
+      //                 width: 2,
+      //                 color: Colors.white,
+      //               ),
+      //             ),
+      //             child: const CircleAvatar(
+      //               radius: 24,
+      //               backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+      //             ),
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
+
+
+      // body: Container(
+      //   decoration: BoxDecoration(
+      //     shape: BoxShape.circle,
+      //     border: Border.all(
+      //       width: 2,
+      //       color: Color(0xff6763EE),
+      //     ),
+      //   ),
+      //   child: Stack(
+      //     children: [
+      //       Positioned(
+      //         right: 0,
+      //         bottom: 0,
+      //         child: Row(
+      //        //   children: actions.map<Widget>((action) {
+      //        //      return Padding(
+      //        //        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      //        //        child: action,
+      //        //      );
+      //          // }).toList(),
+      //         ),
+      //       ),
+      //       CircleAvatar(
+      //         radius: 24,
+      //         backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+      //       ),
+      //     ],
+      //   ),
+      // ),
 
 
 
-
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70),
-        child: Container(
-          child: AppBar(
-            toolbarHeight: 100,
-            backgroundColor: Colors.white,
-            automaticallyImplyLeading: false,
-            title: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 6.0),
-              child: Row(
-                children: [
-                  Text(
-                    'Welcome to ',
-                    style:
-                    TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18),
-                  ),
-                  Text(
-                    'Profile',
-                    style: TextStyle(
-                        fontFamily: 'Poppins Semibold',
-                        fontSize: 18,
-                        color: Color(0xff6763EE)),
-                  ),
+      body: Column(
+        children: [
+          Container(
+            height: 265,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.only(
+                bottomRight: Radius.circular(30),
+                bottomLeft: Radius.circular(30),
+              ),
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xff6763EE).withOpacity(0.7),
+                  Color(0xff6763EE).withOpacity(1),
                 ],
               ),
             ),
-            actions: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      width: 2,
-                      color: Color(0xff6763EE),
-                    ),
-                  ),
-                  child: const CircleAvatar(
-                    radius: 24,
-                    backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+
+
+            child: Stack(
+              children: [
+                const Positioned(
+                  top: 65,
+                  left: 0,
+                  right: 0,
+
+
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Profile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16, color: Colors.white,)),
+                    ],
                   ),
                 ),
-              ),
-            ],
+
+
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 114.0),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                     // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              width: 2,
+                              color: Colors.white,
+                            ),
+                          ),
+
+                          child: const CircleAvatar(
+                            radius: 34,
+                            backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        Text('John Adams', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 20, color: Colors.white,)),
+                        Text('@johnadams', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Colors.white,)),
+
+
+                      ],
+
+                    ),
+                  ),
+                ),
+
+
+
+              ],
+            ),
           ),
-        ),
+
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 22.0),
+            child: Column(
+              children: [
+
+                const SizedBox(
+                  height: 20,
+                ),
+
+
+                Container(
+                  height: 54,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white
+                  ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset('assets/icons/Profile1.svg'),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        const Text('Name', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        const Text('John Adams', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        SvgPicture.asset('assets/icons/Forward.svg'),
+                      ],
+                    ),
+                  ),
+                ),
+
+
+              ],
+            ),
+          ),
+
+
+
+
+
+
+        ],
+
       ),
 
 
 
 
-
-
-
-
-
+      //
+      // Container(
+      //   decoration: BoxDecoration(
+      //     shape: BoxShape.circle,
+      //     border: Border.all(
+      //       width: 2,
+      //       color: Color(0xff6763EE),
+      //     ),
+      //   ),
+      //   child: Stack(
+      //     children: [
+      //       Positioned(
+      //         right: 0,
+      //         bottom: 0,
+      //         child: Row(
+      //           //   children: actions.map<Widget>((action) {
+      //           //      return Padding(
+      //           //        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      //           //        child: action,
+      //           //      );
+      //           // }).toList(),
+      //         ),
+      //       ),
+      //       CircleAvatar(
+      //         radius: 24,
+      //         backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+      //       ),
+      //     ],
+      //   ),
+      // ),
 
 
 
@@ -200,7 +366,7 @@ class _ProfileState extends State<Profile> {
 
               child: BottomNavigationBar(
                 backgroundColor:
-                Color(0xff6763EE).withOpacity(0.9), // Set to transparent
+                    Color(0xff6763EE).withOpacity(0.9), // Set to transparent
                 // backgroundColor: Color(0xff6763EE).withAlpha(100),
 
                 //backgroundColor: Colors.green,
@@ -252,7 +418,7 @@ class _ProfileState extends State<Profile> {
                     color: Color(0xffFFFFFF)),
                 unselectedItemColor: Color(0xffFFFFFF).withOpacity(0.7),
                 unselectedIconTheme:
-                IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)),
+                    IconThemeData(color: Color(0xffFFFFFF).withOpacity(0.2)),
                 selectedItemColor: Color(0xffFFFFFF),
                 type: BottomNavigationBarType.fixed,
                 currentIndex: _selectedIndex,
@@ -277,9 +443,6 @@ class _ProfileState extends State<Profile> {
           ),
         ],
       ),
-
-
-
     );
   }
 }

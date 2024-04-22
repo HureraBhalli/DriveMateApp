@@ -266,7 +266,7 @@ class AddVehicle extends StatelessWidget {
 
                 GestureDetector(
                   child: MyButton(
-                    title: 'Sign Up', onpress: () {
+                    title: 'Register', onpress: () {
                     Navigator.of(context).push(PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) => Home(),
                       transitionDuration: Duration(milliseconds: 120),

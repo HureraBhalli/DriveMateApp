@@ -23,6 +23,7 @@ class _AfterSplashState extends State<AfterSplash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.white,
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.center,

@@ -135,21 +135,28 @@ class _WalletState extends State<Wallet> {
       ),
 
 
+
+
+
+
+
+
+
       body: SingleChildScrollView(
         child: Column(
           children: [
-        
-        
+
+
             const SizedBox(
               height: 30,
             ),
-        
-        
-        
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Container(
-        
+
                   height: 90,
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -157,7 +164,7 @@ class _WalletState extends State<Wallet> {
                     borderRadius: BorderRadius.all(Radius.circular(16)),
                     color: Color(0xff6763EE).withOpacity(0.15), // Purple with 67% opacity
                   ),
-        
+
                   child: const Padding(
                     padding: EdgeInsets.only(top: 18.0, left: 18.0),
                     child: Column(
@@ -170,43 +177,43 @@ class _WalletState extends State<Wallet> {
                   ),
               ),
             ),
-        
-        
-        
-        
+
+
+
+
             const SizedBox(
               height: 18,
             ),
-        
-        
-        
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Row(
                 children: [
-        
+
                   //Conaitner Earned
-        
-        
+
+
                   Expanded(
                     child: Container(
                       height: 80,
-        
-        
+
+
                       decoration: BoxDecoration(
                         border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
                         borderRadius: BorderRadius.all(Radius.circular(16)),
                         color: Color(0xff6763EE).withOpacity(0.15),
                       ),
-        
-        
+
+
                       child: Padding(
                         padding: const EdgeInsets.only(left: 18.0),
                         child: Row(
-        
+
                           children: [
                             SvgPicture.asset('assets/icons/Earn.svg'),
-        
+
                             const Padding(
                               padding: EdgeInsets.only(top: 18.0, left: 10.0),
                               child: Column(
@@ -222,36 +229,36 @@ class _WalletState extends State<Wallet> {
                       ),
                     ),
                   ),
-        
-        
-        
-        
+
+
+
+
                   const SizedBox(
                     width: 10,
                   ),
-        
-        
-        
+
+
+
                   //Conaitner Redeemed
-        
+
                   Expanded(
                     child: Container(
                       height: 80,
-        
-        
+
+
                       decoration: BoxDecoration(
                         border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
                         borderRadius: BorderRadius.all(Radius.circular(16)),
                         color: Color(0xff6763EE).withOpacity(0.15),
                       ),
-        
+
                       child: Padding(
                         padding: const EdgeInsets.only(left: 18.0),
                         child: Row(
-        
+
                           children: [
                             SvgPicture.asset('assets/icons/Redeem.svg'),
-        
+
                             const Padding(
                               padding: EdgeInsets.only(top: 18.0, left: 10.0),
                               child: Column(
@@ -265,25 +272,25 @@ class _WalletState extends State<Wallet> {
                           ],
                         ),
                       ),
-        
+
                     ),
                   )
                 ],
               ),
             ),
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
             const SizedBox(
               height: 18,
             ),
-        
-        
-        
-        
+
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Row(
@@ -291,15 +298,15 @@ class _WalletState extends State<Wallet> {
                   Expanded(
                     child: Container(
                       height: 211,
-        
-        
+
+
                       decoration: BoxDecoration(
                         border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
                         borderRadius: BorderRadius.all(Radius.circular(16)),
                         color: Color(0xff6763EE).withOpacity(0.15),
                       ),
-        
-        
+
+
                       child: Padding(
                         padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0),
                         child: Column(
@@ -316,23 +323,23 @@ class _WalletState extends State<Wallet> {
                                 ),
                               ],
                             ),
-        
+
                             const SizedBox(
                               height: 20,
                             ),
-        
-        
+
+
                             Row(
                               children: [
-        
+
                                 //Conaitner Reward
-        
-        
-        
+
+
+
                                 Container(
                                   height: 40,
                                   width: 40,
-        
+
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(Radius.circular(12)),
                                     color: Colors.white,
@@ -348,35 +355,35 @@ class _WalletState extends State<Wallet> {
                                   ),
                                   child: SvgPicture.asset('assets/icons/CarWash.svg',   fit: BoxFit.none,),
                                 ),
-        
+
                                 const SizedBox(
                                   width: 12,
                                 ),
                                 Text('Free Car\nWash ', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
-        
+
                               ],
                             ),
-        
+
                             const SizedBox(
                               height: 20,
                             ),
-        
+
                             const Row(
                               children: [
                                 Text('42% reached', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16),),
                               ],
                             ),
-        
-        
+
+
                             const SizedBox(
                               height: 12,
                             ),
-        
-        
-        
+
+
+
                             //Linear Progress Bar
-        
-        
+
+
                             const LinearProgressIndicator(
                               value: 0.42,
                               backgroundColor:  Colors.white,
@@ -384,50 +391,50 @@ class _WalletState extends State<Wallet> {
                               minHeight: 6,
                               valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
                             ),
-        
-        
+
+
                             const SizedBox(
                               height: 12,
                             ),
-        
-        
+
+
                             const Row(
                               children: [
                                 Text('\$20 out of \$250', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
                               ],
                             ),
-        
-        
-        
+
+
+
                           ],
-        
+
                         ),
                       ),
-        
+
                     ),
                   ),
-        
-        
-        
-        
+
+
+
+
                   const SizedBox(
                     width: 10,
                   ),
-        
-        
-        
+
+
+
                   //Conaitner Earning
-        
+
                   Expanded(
                     child: Container(
                       height: 211,
-        
+
                       decoration: BoxDecoration(
                         border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
                         borderRadius: BorderRadius.all(Radius.circular(16)),
                         color: Color(0xff6763EE).withOpacity(0.15),
                       ),
-        
+
                       child: Padding(
                         padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0,),
                         child: Column(
@@ -439,33 +446,33 @@ class _WalletState extends State<Wallet> {
                                   flex: 70,
                                 ),
                                 SvgPicture.asset('assets/icons/NextBack.svg'),
-        
-        
+
+
                               ],
                             ),
-        
-        
-        
+
+
+
                             const SizedBox(
                               height: 20,
                             ),
-        
+
                             const Row(
                               children: [
                                 Text('42%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-        
+
                                 Text(' Referrals', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
-        
+
                               ],
                             ),
-        
-        
+
+
                             const SizedBox(
                               height: 6,
                             ),
-        
+
                             //Linear Progress Bar
-        
+
                             const LinearProgressIndicator(
                               value: 0.42,
                               backgroundColor:  Colors.white,
@@ -473,28 +480,28 @@ class _WalletState extends State<Wallet> {
                               minHeight: 6,
                               valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
                             ),
-        
-        
+
+
                             const SizedBox(
                               height: 20,
                             ),
-        
+
                             const Row(
                               children: [
                                 Text('23%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-        
+
                                 Text(' Cash Back', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
-        
+
                               ],
                             ),
-        
-        
+
+
                             const SizedBox(
                               height: 6,
                             ),
-        
+
                             //Linear Progress Bar
-        
+
                             const LinearProgressIndicator(
                               value: 0.23,
                               backgroundColor:  Colors.white,
@@ -502,29 +509,29 @@ class _WalletState extends State<Wallet> {
                               minHeight: 6,
                               valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
                             ),
-        
-        
-        
+
+
+
                             const SizedBox(
                               height: 20,
                             ),
-        
+
                             const Row(
                               children: [
                                 Text('12%', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14),),
-        
+
                                 Text(' Rewards', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 14),),
-        
+
                               ],
                             ),
-        
-        
+
+
                             const SizedBox(
                               height: 6,
                             ),
-        
+
                             //Linear Progress Bar
-        
+
                             const LinearProgressIndicator(
                               value: 0.12,
                               backgroundColor:  Colors.white,
@@ -532,55 +539,55 @@ class _WalletState extends State<Wallet> {
                               minHeight: 6,
                               valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
                             ),
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
                           ],
                         ),
                       ),
-        
+
                     ),
                   )
                 ],
               ),
             ),
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
             //Bottom Box
-        
+
             //Reward
-        
-        
+
+
             Column(
               children: [
                   const SizedBox(
                     height: 20,
                   ),
                 Container(
-                  height: height * 0.3,
-        
-        
+                  height: 245,
+
+
                   decoration: BoxDecoration(
                     // border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
                     borderRadius: const BorderRadius.only(
                         topRight: Radius.circular(30),
                         topLeft: Radius.circular(30)
                     ),
-        
+
                     color: const Color(0xff6763EE).withOpacity(0.3),
                   ),
-        
+
                   child: Padding(
                     padding: const EdgeInsets.only(left: 22.0, right: 22.0, top: 20.0),
                     child: Column(
@@ -590,13 +597,13 @@ class _WalletState extends State<Wallet> {
                             Text('Redeem at', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 18, color: Color(0xff6763EE),),),
                           ],
                         ),
-        
+
                         const SizedBox(
                           height: 12,
                         ),
-        
-        
-        
+
+
+
                         Row(
                           children: [
                             Expanded(
@@ -618,11 +625,11 @@ class _WalletState extends State<Wallet> {
                                ),
                               ),
                             ),
-        
+
                             const SizedBox(
                               width: 12,
                             ),
-        
+
                             Expanded(
                               child: Container(
                                 height: 95,
@@ -642,13 +649,13 @@ class _WalletState extends State<Wallet> {
                                 ),
                               ),
                             ),
-        
-        
+
+
                             const SizedBox(
                               width: 12,
                             ),
-        
-        
+
+
                             Expanded(
                               child: Container(
                                 height: 95,
@@ -668,39 +675,75 @@ class _WalletState extends State<Wallet> {
                                 ),
                               ),
                             ),
-        
-        
-        
-        
-                            // Container(
-                            //
-                            // ),
-                            //
-                            // Container(
-                            //
-                            // ),
-        
+
+
+
+
                           ],
                         ),
-        
-        
-        
+
+                        const SizedBox(
+                          height: 30,
+                        ),
+
+                        Row(
+                          children: [
+                            SvgPicture.asset('assets/icons/Star.svg'),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            const Text('You can claim your rewards & also check the\nmerchant details.', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xff000000),),),
+                          ],
+                        )
+
+
+
                       ],
                     ),
                   ),
-        
-        
-        
+
+
+
                 )
               ],
             )
-        
-        
-        
-        
+
+
+
+
           ],
         ),
       ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -799,6 +842,12 @@ class _WalletState extends State<Wallet> {
       //     ),
       //   ],
       // ),
+
+
+
+
+
+
 
 
 
