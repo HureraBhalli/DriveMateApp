@@ -265,6 +265,7 @@ class _ProfileState extends State<Profile> {
                 ),
 
 
+                //Name
                 Container(
                   height: 54,
                   width: double.infinity,
@@ -294,6 +295,223 @@ class _ProfileState extends State<Profile> {
                     ),
                   ),
                 ),
+
+
+
+                const SizedBox(
+                  height: 12,
+                ),
+
+                //Email
+                Container(
+                  height: 54,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.white
+                  ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset('assets/icons/Email.svg'),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        const Text('Email', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        const Text('johnadmas@gmail.com', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        SvgPicture.asset('assets/icons/Forward.svg'),
+                      ],
+                    ),
+                  ),
+                ),
+
+
+
+
+
+
+
+                const SizedBox(
+                  height: 12,
+                ),
+
+                //Adress
+                Container(
+                  height: 54,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.white
+                  ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset('assets/icons/Adress.svg'),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        const Text('Address', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        const Text('55 St, New York', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                       // SvgPicture.asset('assets/icons/Forward.svg'),
+                      ],
+                    ),
+                  ),
+                ),
+
+
+
+
+
+                const SizedBox(
+                  height: 12,
+                ),
+
+                //Mobile
+                Container(
+                  height: 54,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.white
+                  ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset('assets/icons/Mobile.svg'),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        const Text('Mobile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        SvgPicture.asset('assets/icons/Forward.svg'),
+                      ],
+                    ),
+                  ),
+                ),
+
+
+
+
+
+                const SizedBox(
+                  height: 12,
+                ),
+
+                //Mobile
+                Container(
+                  height: 54,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.white
+                  ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset('assets/icons/Notification.svg'),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        const Text('Notification', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                        const Spacer(
+                          flex: 1,
+                        ),
+
+
+
+
+
+                        //Button Pneding
+
+
+
+
+                        //const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                       // SvgPicture.asset('assets/icons/Forward.svg'),
+                      ],
+                    ),
+                  ),
+                ),
+
+
+
+
+
+
+
+                const SizedBox(
+                  height: 12,
+                ),
+
+                //Mobile
+                Container(
+                  height: 54,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.white
+                  ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Row(
+                      children: [
+                        SvgPicture.asset('assets/icons/Mobile.svg'),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        const Text('Mobile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                        const Spacer(
+                          flex: 1,
+                        ),
+                        const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        SvgPicture.asset('assets/icons/Forward.svg'),
+                      ],
+                    ),
+                  ),
+                ),
+
+
+
+
+
+
+
+
+
+
 
 
               ],
