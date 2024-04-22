@@ -178,390 +178,392 @@ class _ProfileState extends State<Profile> {
 
 
 
-      body: Column(
-        children: [
-          Container(
-            height: 265,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(
-                bottomRight: Radius.circular(30),
-                bottomLeft: Radius.circular(30),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 265,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  bottomRight: Radius.circular(30),
+                  bottomLeft: Radius.circular(30),
+                ),
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xff6763EE).withOpacity(0.7),
+                    Color(0xff6763EE).withOpacity(1),
+                  ],
+                ),
               ),
-              gradient: LinearGradient(
-                colors: [
-                  Color(0xff6763EE).withOpacity(0.7),
-                  Color(0xff6763EE).withOpacity(1),
+        
+        
+              child: Stack(
+                children: [
+                  const Positioned(
+                    top: 65,
+                    left: 0,
+                    right: 0,
+        
+        
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Profile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16, color: Colors.white,)),
+                      ],
+                    ),
+                  ),
+        
+        
+        
+                  Padding(
+                    padding: const EdgeInsets.only(top: 114.0),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Column(
+                       // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                width: 2,
+                                color: Colors.white,
+                              ),
+                            ),
+        
+                            child: const CircleAvatar(
+                              radius: 34,
+                              backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Text('John Adams', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 20, color: Colors.white,)),
+                          Text('@johnadams', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Colors.white,)),
+        
+        
+                        ],
+        
+                      ),
+                    ),
+                  ),
+        
+        
+        
                 ],
               ),
             ),
-
-
-            child: Stack(
-              children: [
-                const Positioned(
-                  top: 65,
-                  left: 0,
-                  right: 0,
-
-
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Profile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16, color: Colors.white,)),
-                    ],
+        
+        
+        
+            //ButtonsList
+        
+        
+        
+        
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 22.0),
+              child: Column(
+                children: [
+        
+                  const SizedBox(
+                    height: 20,
                   ),
-                ),
-
-
-
-                Padding(
-                  padding: const EdgeInsets.only(top: 114.0),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Column(
-                     // mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              width: 2,
-                              color: Colors.white,
-                            ),
+        
+        
+                  //Name
+                  Container(
+                    height: 54,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.white
+                    ),
+        
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/Profile1.svg'),
+                          const SizedBox(
+                            width: 12,
                           ),
-
-                          child: const CircleAvatar(
-                            radius: 34,
-                            backgroundImage: AssetImage('assets/pictures/Hurera.jpeg'),
+                          const Text('Name', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                          const Spacer(
+                            flex: 1,
                           ),
-                        ),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        Text('John Adams', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 20, color: Colors.white,)),
-                        Text('@johnadams', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Colors.white,)),
-
-
-                      ],
-
+                          const Text('John Adams', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          SvgPicture.asset('assets/icons/Forward.svg'),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-
-
-
-              ],
+        
+        
+        
+                  const SizedBox(
+                    height: 12,
+                  ),
+        
+                  //Email
+                  Container(
+                    height: 54,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.white
+                    ),
+        
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/Email.svg'),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          const Text('Email', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                          const Spacer(
+                            flex: 1,
+                          ),
+                          const Text('johnadmas@gmail.com', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          SvgPicture.asset('assets/icons/Forward.svg'),
+                        ],
+                      ),
+                    ),
+                  ),
+        
+        
+        
+        
+        
+        
+        
+                  const SizedBox(
+                    height: 12,
+                  ),
+        
+                  //Adress
+                  Container(
+                    height: 54,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.white
+                    ),
+        
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/Adress.svg'),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          const Text('Address', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                          const Spacer(
+                            flex: 1,
+                          ),
+                          const Text('55 St, New York', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                         // SvgPicture.asset('assets/icons/Forward.svg'),
+                        ],
+                      ),
+                    ),
+                  ),
+        
+        
+        
+        
+        
+                  const SizedBox(
+                    height: 12,
+                  ),
+        
+                  //Mobile
+                  Container(
+                    height: 54,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.white
+                    ),
+        
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/Mobile.svg'),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          const Text('Mobile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                          const Spacer(
+                            flex: 1,
+                          ),
+                          const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          SvgPicture.asset('assets/icons/Forward.svg'),
+                        ],
+                      ),
+                    ),
+                  ),
+        
+        
+        
+        
+        
+                  const SizedBox(
+                    height: 12,
+                  ),
+        
+                  //Notification
+                  Container(
+                    height: 54,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.white
+                    ),
+        
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/Notification.svg'),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          const Text('Notification', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                          const Spacer(
+                            flex: 1,
+                          ),
+        
+        
+        
+        
+        
+                          //Button Pending
+        
+        
+        
+        
+                          //const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                         // SvgPicture.asset('assets/icons/Forward.svg'),
+                        ],
+                      ),
+                    ),
+                  ),
+        
+        
+        
+        
+        
+                  const SizedBox(
+                    height: 12,
+                  ),
+        
+                  //Help
+                  Container(
+                    height: 54,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.white
+                    ),
+        
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/Help.svg'),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          const Text('Help', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
+                          const Spacer(
+                            flex: 1,
+                          ),
+                         // const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
+                         //  const SizedBox(
+                         //    width: 12,
+                         //  ),
+                       //   SvgPicture.asset('assets/icons/Forward.svg'),
+                        ],
+                      ),
+                    ),
+                  ),
+        
+        
+        
+        
+        
+        
+        
+                ],
+              ),
             ),
-          ),
-
-
-
-          //ButtonsList
-
-
-
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 22.0),
-            child: Column(
-              children: [
-
-                const SizedBox(
-                  height: 20,
-                ),
-
-
-                //Name
-                Container(
-                  height: 54,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    color: Colors.white
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset('assets/icons/Profile1.svg'),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        const Text('Name', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        const Text('John Adams', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        SvgPicture.asset('assets/icons/Forward.svg'),
-                      ],
-                    ),
-                  ),
-                ),
-
-
-
-                const SizedBox(
-                  height: 12,
-                ),
-
-                //Email
-                Container(
-                  height: 54,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.white
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset('assets/icons/Email.svg'),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        const Text('Email', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        const Text('johnadmas@gmail.com', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        SvgPicture.asset('assets/icons/Forward.svg'),
-                      ],
-                    ),
-                  ),
-                ),
-
-
-
-
-
-
-
-                const SizedBox(
-                  height: 12,
-                ),
-
-                //Adress
-                Container(
-                  height: 54,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.white
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset('assets/icons/Adress.svg'),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        const Text('Address', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        const Text('55 St, New York', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                       // SvgPicture.asset('assets/icons/Forward.svg'),
-                      ],
-                    ),
-                  ),
-                ),
-
-
-
-
-
-                const SizedBox(
-                  height: 12,
-                ),
-
-                //Mobile
-                Container(
-                  height: 54,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.white
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset('assets/icons/Mobile.svg'),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        const Text('Mobile', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        SvgPicture.asset('assets/icons/Forward.svg'),
-                      ],
-                    ),
-                  ),
-                ),
-
-
-
-
-
-                const SizedBox(
-                  height: 12,
-                ),
-
-                //Notification
-                Container(
-                  height: 54,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.white
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset('assets/icons/Notification.svg'),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        const Text('Notification', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
-                        const Spacer(
-                          flex: 1,
-                        ),
-
-
-
-
-
-                        //Button Pending
-
-
-
-
-                        //const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                       // SvgPicture.asset('assets/icons/Forward.svg'),
-                      ],
-                    ),
-                  ),
-                ),
-
-
-
-
-
-                const SizedBox(
-                  height: 12,
-                ),
-
-                //Help
-                Container(
-                  height: 54,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.white
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset('assets/icons/Help.svg'),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        const Text('Help', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 14, color: Color(0xff1D1D1D),)),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                       // const Text('0930237283728', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Color(0xff6763EE),)),
-                       //  const SizedBox(
-                       //    width: 12,
-                       //  ),
-                     //   SvgPicture.asset('assets/icons/Forward.svg'),
-                      ],
-                    ),
-                  ),
-                ),
-
-
-
-
-
-
-
-              ],
+        
+        
+        
+        
+        
+        
+            const SizedBox(
+              height: 10,
             ),
-          ),
-
-
-
-
-
-
-          const SizedBox(
-            height: 10,
-          ),
-
-
-
-          //Button
-          GestureDetector(
-            child: MyButton(
-              title: 'Track my car!',
-
-              onpress: () {
-                Navigator.of(context).push(PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => Profile(),
-                  transitionDuration: Duration(milliseconds: 120),
-                  reverseTransitionDuration: Duration(milliseconds: 120),
-                  transitionsBuilder:
-                      (context, animation, secondaryAnimation, child) {
-                    // Your existing transition if you still want to apply it
-                    var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
-                        .animate(CurvedAnimation(
-                        parent: animation,
-                        curve: Curves.linearToEaseOut));
-                    return ScaleTransition(
-                      scale: scaleTween,
-                      child: child,
-                    );
-                  },
-                ));
-              },
+        
+        
+        
+            //Button
+            GestureDetector(
+              child: MyButton(
+                title: 'Track my car!',
+        
+                onpress: () {
+                  Navigator.of(context).push(PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) => Profile(),
+                    transitionDuration: Duration(milliseconds: 120),
+                    reverseTransitionDuration: Duration(milliseconds: 120),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      // Your existing transition if you still want to apply it
+                      var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                          .animate(CurvedAnimation(
+                          parent: animation,
+                          curve: Curves.linearToEaseOut));
+                      return ScaleTransition(
+                        scale: scaleTween,
+                        child: child,
+                      );
+                    },
+                  ));
+                },
+              ),
             ),
-          ),
-
-
-
-
-
-        ],
-
+        
+        
+        
+        
+        
+          ],
+        
+        ),
       ),
 
 
