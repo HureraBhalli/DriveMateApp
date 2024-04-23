@@ -257,7 +257,6 @@ class Earning extends StatelessWidget {
         
         
 
-
                   //Refrall Earning
                   Container(
                     height: 56,
