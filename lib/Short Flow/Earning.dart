@@ -126,6 +126,8 @@ class Earning extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
+                  
+                  
         
                   Container(
                     height: 56,
@@ -156,12 +158,13 @@ class Earning extends StatelessWidget {
                           Spacer(
                             flex: 1,
                           ),
-                          Text('12:32PM', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xff0A0A0A),)),
+                          Text('12:32PM', style: TextStyle(fontFamily: 'Poppins Regular', fontSize: 12, color: Color(0xff0A0A0A))),
                         ],
                       ),
                     ),
                   ),
         
+                  
                   const SizedBox(
                     height: 8,
                   ),
@@ -175,7 +178,8 @@ class Earning extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         color: Colors.white
                     ),
-        
+                    
+
                     child: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 12.0),
                       child: Row(
@@ -202,11 +206,14 @@ class Earning extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
+
+
                   const SizedBox(
                     height: 8,
                   ),
-        
+
+
         
         
                   Container(
@@ -300,6 +307,8 @@ class Earning extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         color: Colors.white
                     ),
+
+
         
                     child: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 12.0),
@@ -327,6 +336,8 @@ class Earning extends StatelessWidget {
                       ),
                     ),
                   ),
+
+
         
                   const SizedBox(
                     height: 8,
@@ -452,6 +463,13 @@ class Earning extends StatelessWidget {
                       ),
                     ),
                   ),
+
+
+
+                  const SizedBox(
+                    height: 50,
+                  ),
+
 
                 ],
               )
