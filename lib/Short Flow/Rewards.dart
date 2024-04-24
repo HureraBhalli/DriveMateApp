@@ -79,7 +79,7 @@ class Reward extends StatelessWidget {
                    color: Colors.white,
                    borderRadius: BorderRadius.all(Radius.circular(14)),
                  ),
-              //   child: Image.asset('assets/pictures/Car.png'),
+                 child: Image.asset('assets/pictures/Car.png'),
                )
              ],
            ),
