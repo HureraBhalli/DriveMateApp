@@ -94,7 +94,7 @@ class ReferFriend extends StatelessWidget {
               Container(
                 height: 261,
                 width: 261,
-                child: Image.asset('assets/pictures/QRCode.jpg'),
+                child:  SvgPicture.asset('assets/icons/QRCode.svg', fit: BoxFit.none,),
 
                 decoration: const BoxDecoration(
                  color: Colors.white,

@@ -3,6 +3,7 @@ import 'package:drive_mate/Nav%20Bar/Garage.dart';
 import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Nav%20Bar/Profile.dart';
 import 'package:drive_mate/Short%20Flow/Earning.dart';
+import 'package:drive_mate/Short%20Flow/Rewards.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -297,121 +298,144 @@ class _WalletState extends State<Wallet> {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      height: 211,
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) => Reward(),
+                          transitionDuration: Duration(milliseconds: 120),
+                          reverseTransitionDuration: Duration(milliseconds: 120),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            // Your existing transition if you still want to apply it
+                            var scaleTween = Tween<double>(begin: 0.0, end: 1.0)
+                                .animate(CurvedAnimation(
+                                parent: animation,
+                                curve: Curves.linearToEaseOut));
+                            return ScaleTransition(
+                              scale: scaleTween,
+                              child: child,
+                            );
+                          },
+                        ));
+                      },
 
 
-                      decoration: BoxDecoration(
-                        border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
-                        borderRadius: BorderRadius.all(Radius.circular(16)),
-                        color: Color(0xff6763EE).withOpacity(0.15),
-                      ),
+                      child: Container(
+                        height: 211,
 
 
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                const Text('Rewards', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
-                                const Spacer(
-                                  flex: 70,
-                                ),
-                                SvgPicture.asset('assets/icons/NextBack.svg'),
-                                const Spacer(
-                                  flex: 1,
-                                ),
-                              ],
-                            ),
-
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-
-                            Row(
-                              children: [
-
-                                //Conaitner Reward
-
-
-
-                                Container(
-                                  height: 40,
-                                  width: 40,
-
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.5),
-                                        spreadRadius: 0.1,
-                                        blurRadius: 0.1,
-                                        offset: Offset(0, 1), // changes position of shadow
-                                      ),
-                                    ],
-                                    //boxShadow: BoxDecoration(4),
-                                  ),
-                                  child: SvgPicture.asset('assets/icons/CarWash.svg',   fit: BoxFit.none,),
-                                ),
-
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                Text('Free Car\nWash ', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
-
-                              ],
-                            ),
-
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            const Row(
-                              children: [
-                                Text('42% reached', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16),),
-                              ],
-                            ),
-
-
-                            const SizedBox(
-                              height: 12,
-                            ),
-
-
-
-                            //Linear Progress Bar
-
-
-                            const LinearProgressIndicator(
-                              value: 0.42,
-                              backgroundColor:  Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(6)),
-                              minHeight: 6,
-                              valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
-                            ),
-
-
-                            const SizedBox(
-                              height: 12,
-                            ),
-
-
-                            const Row(
-                              children: [
-                                Text('\$20 out of \$250', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
-                              ],
-                            ),
-
-
-
-                          ],
-
+                        decoration: BoxDecoration(
+                          border: Border.all( color: Color(0xff6763EE).withOpacity(1)),
+                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          color: Color(0xff6763EE).withOpacity(0.15),
                         ),
-                      ),
 
+
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  const Text('Rewards', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 14),),
+                                  const Spacer(
+                                    flex: 70,
+                                  ),
+                                  SvgPicture.asset('assets/icons/NextBack.svg'),
+                                  const Spacer(
+                                    flex: 1,
+                                  ),
+                                ],
+                              ),
+
+                              const SizedBox(
+                                height: 20,
+                              ),
+
+
+                              Row(
+                                children: [
+
+                                  //Conaitner Reward
+
+
+
+                                  Container(
+                                    height: 40,
+                                    width: 40,
+
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 0.1,
+                                          blurRadius: 0.1,
+                                          offset: Offset(0, 1), // changes position of shadow
+                                        ),
+                                      ],
+                                      //boxShadow: BoxDecoration(4),
+                                    ),
+                                    child: SvgPicture.asset('assets/icons/CarWash.svg',   fit: BoxFit.none,),
+                                  ),
+
+                                  const SizedBox(
+                                    width: 12,
+                                  ),
+                                  Text('Free Car\nWash ', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
+
+                                ],
+                              ),
+
+                              const SizedBox(
+                                height: 20,
+                              ),
+
+                              const Row(
+                                children: [
+                                  Text('42% reached', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16),),
+                                ],
+                              ),
+
+
+                              const SizedBox(
+                                height: 12,
+                              ),
+
+
+
+                              //Linear Progress Bar
+
+
+                              const LinearProgressIndicator(
+                                value: 0.42,
+                                backgroundColor:  Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(6)),
+                                minHeight: 6,
+                                valueColor: AlwaysStoppedAnimation(Color(0xff6763EE)),
+                              ),
+
+
+                              const SizedBox(
+                                height: 12,
+                              ),
+
+
+                              const Row(
+                                children: [
+                                  Text('\$20 out of \$250', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12),),
+                                ],
+                              ),
+
+
+
+                            ],
+
+                          ),
+                        ),
+
+                      ),
                     ),
                   ),
 
