@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
       home: const Splash(),
 
       routes: {
-         Splash.id: (context) => const Splash(),
+
+        Splash.id: (context) => const Splash(),
         AfterSplash.id: (context) => const AfterSplash(),
         Welcome.id: (context) => const Welcome(),
         SignUp.id: (context) => const SignUp(),
