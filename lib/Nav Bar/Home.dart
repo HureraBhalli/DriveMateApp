@@ -1,5 +1,6 @@
 // import 'dart:ffi';
 import 'dart:ui';
+import 'package:drive_mate/Book%20Service/Services.dart';
 import 'package:drive_mate/Buy%20Vehicle/Buy.dart';
 import 'package:drive_mate/Components/My%20Buttons.dart';
 import 'package:drive_mate/Nav%20Bar/Garage.dart';
@@ -627,8 +628,7 @@ class _HomeState extends State<Home> {
                 title: 'Book a Service!',
                 onpress: () {
                   Navigator.of(context).push(PageRouteBuilder(
-                    pageBuilder: (context, animation, secondaryAnimation) =>
-                        Home(),
+                    pageBuilder: (context, animation, secondaryAnimation) => Services(),
                     transitionDuration: Duration(milliseconds: 120),
                     reverseTransitionDuration: Duration(milliseconds: 120),
                     transitionsBuilder:
