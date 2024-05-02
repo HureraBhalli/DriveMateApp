@@ -35,7 +35,7 @@ class _ServicesState extends State<Services> {
 
 
   int _selectedIndex = 0;
-
+  int _selectedIndex2 = 0;
 
 
   @override
@@ -134,8 +134,12 @@ class _ServicesState extends State<Services> {
           ),
 
 
+
+
+
+          //Main Container
           Container(
-            height: 500,
+            height: 600,
             decoration: BoxDecoration(
               color: Color(0xff000000).withOpacity(0.1),
               borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -248,75 +252,83 @@ class _ServicesState extends State<Services> {
 
 
 
+
+
+                
                 //Shopping Cards
 
-
-                Row(
+                Column(
                   children: [
 
-                    SizedBox(
-                      height: 270,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 22.0),
-                        child: ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: 2,
-                          scrollDirection: Axis.horizontal,
+                    Row(
+                      children: [
+                        SizedBox(
+                          height: 270,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 22.0),
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              itemCount: 2,
+                              scrollDirection: Axis.horizontal,
 
-                          itemBuilder: (_, index) {
-                            List<String> serviceNames = [
-                              'All',
-                              'Oil Changes',
-                            ];
+                              itemBuilder: (_, index) {
+                                List<String> serviceNames = [
+                                  'All',
+                                  'Oil Changes',
 
-                            return GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _selectedIndex = index;
-                                });
-                              },
+                                ];
+
+                                return GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      _selectedIndex2 = index;
+                                    });
+                                  },
 
 
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 12.0),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 210,
-                                      width: 167,
-                                      padding: EdgeInsets.symmetric(horizontal: 12),
-                                      decoration: BoxDecoration(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(8)),
-                                        border: _selectedIndex == index ? null : Border.all(color: Colors.black, width: 1),
-                                        color: _selectedIndex == index ? Color(0xff6763EE).withOpacity(0.95) : null, // Purple with 67% opacity
-                                      ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(right: 12.0),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          height: 210,
+                                          width: 167,
 
-                                      child: Center(
-                                        child: Text(
-                                          serviceNames[index], // Get text based on index
-                                          style: TextStyle(fontFamily: 'Poppins Medium',
-                                              fontSize: 14,
-                                              color: _selectedIndex == index ? Colors
-                                                  .white : Colors.black),
+                                          decoration: BoxDecoration(
+                                            borderRadius: const BorderRadius.all(
+                                                Radius.circular(8)),
+                                            border: _selectedIndex2 == index ? null : Border.all(color: Colors.black, width: 1),
+                                            color: _selectedIndex2 == index ? Color(0xff6763EE).withOpacity(0.95) : null, // Purple with 67% opacity
+                                          ),
+
 
                                         ),
-                                        //    child: Text('Services', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 16),),
-                                      ),
-                                    ),
 
-                                  ],
-                                ),
-                              ),
-                            );
-                          },
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
                         ),
-                      ),
+
+                      ],
                     ),
 
 
+
+
                   ],
-                )
+                ),
+
+
+
+
+
+
+
+
 
 
 
