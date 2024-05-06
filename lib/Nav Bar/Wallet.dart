@@ -292,7 +292,6 @@ class _WalletState extends State<Wallet> {
 
 
 
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 22.0),
               child: Row(
