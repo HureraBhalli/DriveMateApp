@@ -240,14 +240,10 @@ class _ServicesState extends State<Services> {
                 ),
 
 
-
-
-
-
+                
                 const SizedBox(
                   height: 20,
                 ),
-
 
 
 
