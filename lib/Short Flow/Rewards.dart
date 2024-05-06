@@ -53,6 +53,7 @@ class Reward extends StatelessWidget {
                     ));
                   },
 
+
                   child: SvgPicture.asset('assets/icons/Cross.svg')),
             ],
           ),
