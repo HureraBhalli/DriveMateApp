@@ -572,10 +572,7 @@ class _ProfileState extends State<Profile> {
 
 
 
-
-
-
-
+            
             //Track My Car
 
             GestureDetector(

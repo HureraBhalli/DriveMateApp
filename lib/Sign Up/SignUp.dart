@@ -3,7 +3,7 @@ import 'package:drive_mate/Nav%20Bar/Home.dart';
 import 'package:drive_mate/Splash%20Screens/after_splash.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+//import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:vector_graphics/src/vector_graphics.dart';
 import 'package:flutter/widgets.dart';
