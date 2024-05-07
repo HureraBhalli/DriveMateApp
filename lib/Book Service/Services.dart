@@ -250,12 +250,14 @@ class _ServicesState extends State<Services> {
                   ),
 
 
+
+
                   Column(
                     children: [
                       SizedBox(
                         height: 1000,
                         child: ListView.builder(
-                          itemCount: 10,
+                          itemCount: 5,
                           itemBuilder: (context, index) {
                             String imagePath = 'assets/pictures/CarReward.png';
                             return Padding(
