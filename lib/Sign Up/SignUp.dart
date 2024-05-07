@@ -11,6 +11,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 
 
+
 class SignUp extends StatelessWidget {
 
   static const String id = 'Sign Up';
