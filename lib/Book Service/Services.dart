@@ -246,37 +246,136 @@ class _ServicesState extends State<Services> {
         
         
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
 
 
 
 
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: 1000,
-                        child: ListView.builder(
-                          itemCount: 5,
-                          itemBuilder: (context, index) {
-                            String imagePath = 'assets/pictures/CarReward.png';
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8.0), // Add vertical spacing
-                              child: ListTile(
-                                leading: Image.asset(
-                                  imagePath,
-                                  width: 100,
-                                  height: 80,
-                                  fit: BoxFit.cover,
+                  // Container(
+                  //   height: 600, // Set a specific height for the Column
+                  //   child: Column(
+                  //     children: [
+                  //       Expanded(
+                  //         child: GridView.count(
+                  //           crossAxisCount: 2,
+                  //           children: [
+                  //             Padding(
+                  //               padding: const EdgeInsets.only(left: 22.0, right: 10.0),
+                  //               child: Container(
+                  //                 height: 100,
+                  //                 width: 100,
+                  //                 decoration: const BoxDecoration(
+                  //                   color: Colors.pink,
+                  //                   borderRadius: BorderRadius.all(Radius.circular(12)),
+                  //                 ),
+                  //
+                  //                 child: Column(
+                  //                   children: [
+                  //                     Padding(
+                  //                       padding: const EdgeInsets.only(top: 12.0),
+                  //                       child: Image.asset('assets/pictures/vehicle1.png'),
+                  //                     ),
+                  //
+                  //                     SizedBox(
+                  //                       height: 5,
+                  //                     ),
+                  //                     const Row(
+                  //                       children: [
+                  //
+                  //
+                  //                         Padding(
+                  //                           padding: EdgeInsets.only(left: 18.0),
+                  //                           child: Column(
+                  //                             crossAxisAlignment: CrossAxisAlignment.start,
+                  //                             children: [
+                  //                               Text('Brake Oil Change', style: TextStyle(fontFamily: 'Poppins Medium', fontSize: 12, color: Colors.black),),
+                  //                               Text('\$50', style: TextStyle(fontFamily: 'Poppins Semibold', fontSize: 12, color: Colors.white),),
+                  //                             ],
+                  //                           ),
+                  //                         ),
+                  //
+                  //
+                  //
+                  //                       ],
+                  //                     ),
+                  //                   ],
+                  //                 ),
+                  //
+                  //               ),
+                  //             ),
+                  //
+                  //
+                  //
+                  //           ],
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
+
+
+
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                    child: SizedBox(
+                      height: 1300,
+                      child: GridView.builder(
+                        itemCount: 3,
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                          crossAxisSpacing: 10,
+                          mainAxisSpacing: 15),
+
+                          itemBuilder: (context, index){
+                        return  Column(
+                          children: [
+                            Container(
+                                width: double.infinity,
+                                height: 200,
+                                decoration: const BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.all(Radius.circular(12)),
                                 ),
-                                title: Text('Number: $index'),
-                              ),
-                            );
-                          },
+
+
+                            ),
+                          ],
+                        );
+                        }
                         ),
-                      ),
-                    ],
+                    ),
                   ),
+
+
+
+
+                  // Column(
+                  //   children: [
+                  //     SizedBox(
+                  //       height: 1000,
+                  //       child: ListView.builder(
+                  //         itemCount: 5,
+                  //         itemBuilder: (context, index) {
+                  //           String imagePath = 'assets/pictures/CarReward.png';
+                  //           return Padding(
+                  //             padding: const EdgeInsets.symmetric(vertical: 8.0), // Add vertical spacing
+                  //             child: ListTile(
+                  //               leading: Image.asset(
+                  //                 imagePath,
+                  //                 width: 100,
+                  //                 height: 80,
+                  //                 fit: BoxFit.cover,
+                  //               ),
+                  //               title: Text('Number: $index'),
+                  //             ),
+                  //           );
+                  //         },
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
 
 
 
