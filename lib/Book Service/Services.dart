@@ -315,8 +315,6 @@ class _ServicesState extends State<Services> {
                   // ),
 
 
-
-
                   Padding(
                     padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                     child: SizedBox(
