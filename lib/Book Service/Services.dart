@@ -338,9 +338,6 @@ class _ServicesState extends State<Services> {
                                   color: Colors.green,
                                   borderRadius: BorderRadius.all(Radius.circular(12)),
                                 ),
-
-
-
                             ),
                           ],
                         );
@@ -348,6 +345,8 @@ class _ServicesState extends State<Services> {
                         ),
                     ),
                   ),
+
+
 
 
 
