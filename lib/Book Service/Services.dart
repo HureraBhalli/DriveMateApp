@@ -251,7 +251,6 @@ class _ServicesState extends State<Services> {
 
 
 
-
                   // Container(
                   //   height: 600, // Set a specific height for the Column
                   //   child: Column(
@@ -304,9 +303,6 @@ class _ServicesState extends State<Services> {
                   //
                   //               ),
                   //             ),
-                  //
-                  //
-                  //
                   //           ],
                   //         ),
                   //       ),
